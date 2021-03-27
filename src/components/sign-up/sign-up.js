@@ -5,7 +5,6 @@ import CustomButton from "../custom-button/custom-button";
 import "./sign-up.scss";
 
 import { auth, createUserProfileDocument } from "../../firebase/firebase.utils";
-import { useHistory } from "react-router-dom";
 
 class SignUp extends React.Component {
     state = {
@@ -15,7 +14,7 @@ class SignUp extends React.Component {
         confirmPassword: "",
     };
 
-    handleSubmit = async (event) => {
+    handleSubmit = async event => {
         event.preventDefault();
 
         const { displayName, email, password, confirmPassword } = this.state;
@@ -44,7 +43,7 @@ class SignUp extends React.Component {
         }
     };
 
-    handleChange = (event) => {
+    handleChange = event => {
         const { name, value } = event.target;
         this.setState({ [name]: value });
     };
