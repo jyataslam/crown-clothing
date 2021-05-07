@@ -1,6 +1,7 @@
 import firebase from "firebase/app";
 import "firebase/firestore";
 import "firebase/auth";
+import collection from "../pages/collection/collection";
 
 const config = {
     apiKey: "AIzaSyBaOUfC1ioshfzMIa_VLlLSqTIPTSKKtQM",
@@ -36,6 +37,43 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
     }
 
     return userRef;
+};
+
+export const addCollectionAndDocuments = async (
+    collectionKey,
+    objectsToAdd
+) => {
+    const collectionRef = firestore.collection(collectionKey);
+    // console.log("collection ref", collectionRef);
+
+    const batch = firestore.batch();
+    objectsToAdd.forEach(obj => {
+        const newDocRef = collectionRef.doc();
+        batch.set(newDocRef, obj);
+    });
+
+    return await batch.commit();
+};
+
+export const convertCollectionsSnapshotToMap = collections => {
+    const transformedCollection = collections.docs.map(doc => {
+        const { title, items } = doc.data();
+
+        return {
+            routeName: encodeURI(title.toLowerCase()),
+            id: doc.id,
+            title,
+            items,
+        };
+    });
+
+    return transformedCollection.reduce((accumulator, collection) => {
+        // set each propery equal to their respective collection
+        // ex: start with an empty object and set 'hats' equal to the 'hats' collection, and so on with each one creating a new object each time
+        // you'll end up with the titles being the respective keys to their collection objects
+        accumulator[collection.title.toLowerCase()] = collection;
+        return accumulator;
+    }, {});
 };
 
 firebase.initializeApp(config);
