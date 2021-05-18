@@ -13,8 +13,6 @@ import {
 import ShopActionTypes from "./shop.types";
 
 export function* fetchCollectionsAsync() {
-    yield console.log("I am fired");
-
     try {
         // get the collection reference from our firestore db
         const collectionRef = firestore.collection("collections");
