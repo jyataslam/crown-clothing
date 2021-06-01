@@ -6,10 +6,13 @@ import createSagaMiddleware from "redux-saga";
 import rootSaga from "./root-saga";
 import rootReducer from "./root-reducer";
 
+// create the Redux-Saga Middleware
 const sagaMiddleware = createSagaMiddleware();
 
+// add middlewares to array
 const middlewares = [sagaMiddleware];
 
+// only add logger to middlewares if in dev mode
 if (process.env.NODE_ENV === "development") {
     middlewares.push(logger);
 }
