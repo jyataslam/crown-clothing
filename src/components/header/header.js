@@ -14,6 +14,7 @@ import {
     HeaderContainer,
     LogoContainer,
     OptionsContainer,
+    ShopButtonContainer,
     OptionLink,
     Image,
 } from "./header.styles";
@@ -34,9 +35,11 @@ const Header = ({ currentUser, hidden, signOutStart }) => {
                 ) : (
                     <OptionLink to="/signin">SIGN IN</OptionLink>
                 )}
-                <CartIcon />
             </OptionsContainer>
-            {hidden ? null : <CartDropdown />}
+            <ShopButtonContainer>
+                <CartIcon />
+                {hidden ? null : <CartDropdown />}
+            </ShopButtonContainer>
         </HeaderContainer>
     );
 };

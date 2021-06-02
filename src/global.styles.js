@@ -6,8 +6,8 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        font-family: 'Open Sans Condensed', sans-serif;
-        padding: 20px 60px;
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 1px;
 
         @media screen and (max-width: 800px) {
             padding: 10px;
@@ -21,7 +21,7 @@ export const GlobalStyle = createGlobalStyle`
 
     #root {
         @media screen and (max-width: 800px) {
-            margin-top: 60px;
+            margin-top: 80px;
         }
     }
 `;

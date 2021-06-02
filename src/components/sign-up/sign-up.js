@@ -26,24 +26,6 @@ const SignUp = ({ signUpStart }) => {
         }
 
         signUpStart({ displayName, email, password });
-
-        // try {
-        //     const { user } = await auth.createUserWithEmailAndPassword(
-        //         email,
-        //         password
-        //     );
-
-        //     await createUserProfileDocument(user, { displayName });
-
-        //     this.setState({
-        //         displayName: "",
-        //         email: "",
-        //         password: "",
-        //         confirmPassword: "",
-        //     });
-        // } catch (error) {
-        //     console.log(error.message);
-        // }
     };
 
     const handleChange = event => {
@@ -53,7 +35,7 @@ const SignUp = ({ signUpStart }) => {
 
     return (
         <div className="sign-up">
-            <h2 className="title">I Do Not Have An Account</h2>
+            <h2 className="title">Need to create an account?</h2>
             <span>Sign Up With Your Email And Password</span>
             <form onSubmit={handleSubmit} className="sign-up-form">
                 <FormInput

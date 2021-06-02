@@ -5,12 +5,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid black;
     margin: 0 7.5px 15px;
     background-position: center;
     background-size: cover;
     position: relative;
     overflow: hidden;
+    background: black;
 
     &.large {
       height: 380px;
@@ -35,13 +35,14 @@
     &:hover {
       cursor: pointer;
 
-      & .background-image {
-        transform: scale(1.1);
-        transition: transform 4s cubic-bezier(0.25, 0.45, 0.45, 0.95);
-      }
+      // & .background-image {
+      //   transform: scale(1.1);
+      //   transition: transform 4s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+      // }
 
       & .content {
-        opacity: 0.9;
+        background: white;
+        color: black;
       }
     }
 
@@ -57,27 +58,31 @@
       background-position: center;
       position: absolute;
       transform: scale(1);
+      opacity: .8;
     }
   
     .content {
-      height: 90px;
-      padding: 0 25px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      border: 1px solid black;
-      background-color: white;
-      opacity: 0.7;
+      border: 1px solid white;
+      z-index: 1;
+      padding: .775rem 2.25rem;
+      color: white;
+      transition: all .2s ease-in-out;
   
       .title {
-        font-weight: bold;
-        margin-bottom: 6px;
+        font-weight: 700;
+        margin: 0;
+        padding: 0;
         font-size: 22px;
-        color: #4a4a4a;
+        color: inherit;
+        letter-spacing: 0;
       }
   
       .subtitle {
+        color: inherit;
         font-weight: lighter;
         font-size: 16px;
       }

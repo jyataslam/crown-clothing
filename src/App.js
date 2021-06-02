@@ -6,6 +6,7 @@ import { createStructuredSelector } from "reselect";
 import { selectCurrentUser } from "./redux/user/user.selectors";
 import { checkUserSession } from "./redux/user/user.actions";
 
+import ScrollToTop from "./components/scroll-to-top/scroll-to-top.component";
 import Header from "./components/header/header";
 import HomePage from "./pages/homepage/homepage";
 import ShopPage from "./pages/shop/shop";
@@ -22,6 +23,7 @@ const App = ({ checkUserSession, currentUser }) => {
     return (
         <div>
             <GlobalStyle />
+            <ScrollToTop />
             <Header />
             <Switch>
                 <Route exact path="/" component={HomePage} />
