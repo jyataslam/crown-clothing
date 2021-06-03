@@ -8,7 +8,7 @@ const CollectionPreview = ({ title, items, routeName }) => {
     return (
         <div className="collection-preview">
             <h1 className="title">
-                {title.toUpperCase()} <div className="divider"></div>
+                {title.toUpperCase()}
                 <span className="view-all">
                     <Link to={`/shop/${routeName}`}>view all</Link>
                 </span>

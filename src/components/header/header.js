@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 
@@ -8,7 +8,7 @@ import { selectCartHidden } from "../../redux/cart/cart.selectors";
 import { selectCurrentUser } from "../../redux/user/user.selectors";
 import { signOutStart } from "../../redux/user/user.actions";
 
-import Logo from "../../assets/images/logo.png";
+import Logo from "../../assets/images/goggins_logo.png";
 
 import {
     HeaderContainer,
@@ -20,8 +20,26 @@ import {
 } from "./header.styles";
 
 const Header = ({ currentUser, hidden, signOutStart }) => {
+    const [scrolled, setScrolled] = useState("100px");
+
+    const handleScroll = () => {
+        if (window.scrollY >= 40) {
+            setScrolled("70px");
+        } else if (window.scrollY < 40) {
+            setScrolled("100px");
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, [scrolled]);
+
     return (
-        <HeaderContainer>
+        <HeaderContainer size={scrolled}>
             <LogoContainer to="/">
                 <Image src={Logo} alt="logo" />
             </LogoContainer>

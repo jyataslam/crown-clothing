@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const HeaderContainer = styled.div`
-    height: 70px;
+    height: ${props => props.size};
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
@@ -14,6 +14,7 @@ export const HeaderContainer = styled.div`
     top: 0;
     background: white;
     z-index: 10;
+    transition: height 0.3s ease-in-out;
 
     @media screen and (max-width: 800px) {
         position: fixed;
@@ -29,6 +30,7 @@ export const HeaderContainer = styled.div`
 
 export const LogoContainer = styled(Link)`
     height: 100%;
+    width: 10%;
 `;
 
 export const Image = styled.img`
@@ -38,16 +40,18 @@ export const Image = styled.img`
 
 export const OptionsContainer = styled.div`
     height: 100%;
+    width: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
 
     @media screen and (max-width: 800px) {
-        /* width: 100%; */
+        display: none;
     }
 `;
 
 export const ShopButtonContainer = styled.div`
+    width: 10%;
     position: relative;
     display: flex;
     align-items: center;

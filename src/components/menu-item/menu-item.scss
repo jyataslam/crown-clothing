@@ -18,6 +18,7 @@
   
     &:first-child {
       margin-right: 7.5px;
+      min-width: 50%;
 
       @media screen and (max-width: 800px) {
         margin-right: 0
@@ -70,13 +71,14 @@
       z-index: 1;
       padding: .775rem 2.25rem;
       color: white;
+      background-color: #000000c2;
       transition: all .2s ease-in-out;
   
       .title {
         font-weight: 700;
         margin: 0;
         padding: 0;
-        font-size: 22px;
+        font-size: 1.6rem;
         color: inherit;
         letter-spacing: 0;
       }
@@ -84,7 +86,8 @@
       .subtitle {
         color: inherit;
         font-weight: lighter;
-        font-size: 16px;
+        font-size: 14px;
+        // display: none;
       }
     }
 }

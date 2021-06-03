@@ -21,7 +21,7 @@ export const GlobalStyle = createGlobalStyle`
 
     #root {
         @media screen and (max-width: 800px) {
-            margin-top: 80px;
+            margin-top: 50px;
         }
     }
 `;
