@@ -14,6 +14,12 @@ export const HeroContainer = styled.div`
     flex-direction: column;
     padding: 20px 6rem;
     color: black;
+    border-left: 7.5px solid white;
+    border-right: 7.5px solid white;
+
+    @media screen and (max-width: 800px) {
+        border: none;
+    }
 `;
 
 export const HeroTitle = styled.h1`

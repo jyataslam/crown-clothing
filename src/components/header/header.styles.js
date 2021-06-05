@@ -24,13 +24,13 @@ export const HeaderContainer = styled.div`
         padding: 10px;
         margin-bottom: 0;
         background: white;
-        z-index: 1;
+        z-index: 10;
     }
 `;
 
 export const LogoContainer = styled(Link)`
     height: 100%;
-    width: 10%;
+    width: 15%;
 `;
 
 export const Image = styled.img`
@@ -40,7 +40,7 @@ export const Image = styled.img`
 
 export const OptionsContainer = styled.div`
     height: 100%;
-    width: 80%;
+    width: 70%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -51,11 +51,11 @@ export const OptionsContainer = styled.div`
 `;
 
 export const ShopButtonContainer = styled.div`
-    width: 10%;
+    width: 15%;
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
 `;
 
 export const OptionLink = styled(Link)`

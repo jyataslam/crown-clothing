@@ -4,11 +4,12 @@ import { createStructuredSelector } from "reselect";
 
 import CartIcon from "../cart-icon/cart-icon";
 import CartDropdown from "../cart-dropdown/cart-dropdown";
+import UserIcon from "../user-icon/user-icon.component";
 import { selectCartHidden } from "../../redux/cart/cart.selectors";
 import { selectCurrentUser } from "../../redux/user/user.selectors";
 import { signOutStart } from "../../redux/user/user.actions";
 
-import Logo from "../../assets/images/goggins_logo.png";
+import Logo from "../../assets/images/logo_footer.png";
 
 import {
     HeaderContainer,
@@ -45,6 +46,7 @@ const Header = ({ currentUser, hidden, signOutStart }) => {
             </LogoContainer>
             <OptionsContainer>
                 <OptionLink to="/shop">Shop</OptionLink>
+                <OptionLink to="/about">About</OptionLink>
                 <OptionLink to="/contact">Contact</OptionLink>
                 {currentUser ? (
                     <OptionLink as="div" onClick={signOutStart}>
@@ -55,6 +57,9 @@ const Header = ({ currentUser, hidden, signOutStart }) => {
                 )}
             </OptionsContainer>
             <ShopButtonContainer>
+                {currentUser !== null ? (
+                    <UserIcon username={currentUser.displayName} />
+                ) : null}
                 <CartIcon />
                 {hidden ? null : <CartDropdown />}
             </ShopButtonContainer>

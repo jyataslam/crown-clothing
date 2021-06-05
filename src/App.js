@@ -8,8 +8,10 @@ import { checkUserSession } from "./redux/user/user.actions";
 
 import ScrollToTop from "./components/scroll-to-top/scroll-to-top.component";
 import Header from "./components/header/header";
+import Footer from "./components/footer/footer.component";
 import HomePage from "./pages/homepage/homepage";
 import ShopPage from "./pages/shop/shop";
+import AboutPage from "./pages/about/about.page";
 import SignInAndSignUpPage from "./pages/sign-in-and-sign-up/sign-in-and-sign-up";
 import CheckoutPage from "./pages/checkout/checkout";
 
@@ -28,6 +30,7 @@ const App = ({ checkUserSession, currentUser }) => {
             <Switch>
                 <Route exact path="/" component={HomePage} />
                 <Route path="/shop" component={ShopPage} />
+                <Route path="/about" component={AboutPage} />
                 <Route exact path="/checkout" component={CheckoutPage} />
                 <Route
                     exact
@@ -41,6 +44,7 @@ const App = ({ checkUserSession, currentUser }) => {
                     }
                 />
             </Switch>
+            <Footer />
         </div>
     );
 };
