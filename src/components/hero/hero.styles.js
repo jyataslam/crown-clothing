@@ -13,12 +13,20 @@ export const HeroContainer = styled.div`
     align-items: flex-end;
     flex-direction: column;
     padding: 20px 6rem;
-    color: black;
+    color: white;
     border-left: 7.5px solid white;
     border-right: 7.5px solid white;
 
     @media screen and (max-width: 800px) {
         border: none;
+        height: 520px;
+        background-position-x: 10%;
+        color: white;
+        padding-left: 5rem;
+        padding-right: 2rem;
+        justify-content: flex-end;
+        text-align: right;
+        background-position-x: 10%;
     }
 `;
 
@@ -26,9 +34,15 @@ export const HeroTitle = styled.h1`
     color: inherit;
     text-transform: uppercase;
     font-size: 5rem;
+    line-height: 5rem;
     font-weight: 400;
     letter-spacing: 0;
     margin-bottom: 0;
+
+    @media screen and (max-width: 800px) {
+        font-size: 3rem;
+        line-height: 2.8rem;
+    }
 `;
 
 export const HeroSubtitle = styled.h3`

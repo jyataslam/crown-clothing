@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
+import { UserIconContainer } from "../user-icon/user-icon.styles";
+
 export const HeaderContainer = styled.div`
     height: ${props => props.size};
     width: 100%;
@@ -26,11 +28,21 @@ export const HeaderContainer = styled.div`
         background: white;
         z-index: 10;
     }
+
+    @media screen and (max-width: 550px) {
+        ${UserIconContainer} {
+            display: none;
+        }
+    }
 `;
 
 export const LogoContainer = styled(Link)`
     height: 100%;
     width: 15%;
+
+    @media screen and (max-width: 800px) {
+        width: unset;
+    }
 `;
 
 export const Image = styled.img`
@@ -69,4 +81,22 @@ export const OptionLink = styled(Link)`
     &:hover {
         color: black;
     }
+`;
+
+export const NavBtnContainer = styled.div`
+    width: 15%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+
+    @media screen and (max-width: 800px) {
+        display: initial;
+    }
+`;
+
+export const Hamburger = styled.img`
+    width: auto;
+    height: 100%;
 `;

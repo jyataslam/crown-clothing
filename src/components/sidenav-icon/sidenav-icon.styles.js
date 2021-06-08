@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export const UserIconContainer = styled.div`
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    padding-right: 8px;
+    padding-left: 5px;
 `;
 
 export const Icon = styled.img`

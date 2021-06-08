@@ -5,23 +5,29 @@ import { createStructuredSelector } from "reselect";
 import CartIcon from "../cart-icon/cart-icon";
 import CartDropdown from "../cart-dropdown/cart-dropdown";
 import UserIcon from "../user-icon/user-icon.component";
+import Sidenav from "../sidenav/sidenav.component";
+
 import { selectCartHidden } from "../../redux/cart/cart.selectors";
 import { selectCurrentUser } from "../../redux/user/user.selectors";
 import { signOutStart } from "../../redux/user/user.actions";
 
 import Logo from "../../assets/images/logo_footer.png";
+import HamburgerOpen from "../../assets/images/hamburger_open.png";
 
 import {
     HeaderContainer,
     LogoContainer,
     OptionsContainer,
     ShopButtonContainer,
+    NavBtnContainer,
     OptionLink,
     Image,
+    Hamburger,
 } from "./header.styles";
 
 const Header = ({ currentUser, hidden, signOutStart }) => {
     const [scrolled, setScrolled] = useState("100px");
+    const [open, isOpen] = useState(false);
 
     const handleScroll = () => {
         if (window.scrollY >= 40) {
@@ -29,6 +35,10 @@ const Header = ({ currentUser, hidden, signOutStart }) => {
         } else if (window.scrollY < 40) {
             setScrolled("100px");
         }
+    };
+
+    const handleSidenavClick = () => {
+        isOpen(!open);
     };
 
     useEffect(() => {
@@ -39,8 +49,14 @@ const Header = ({ currentUser, hidden, signOutStart }) => {
         };
     }, [scrolled]);
 
+    console.log(open);
+
     return (
         <HeaderContainer size={scrolled}>
+            <NavBtnContainer>
+                <Hamburger src={HamburgerOpen} onClick={handleSidenavClick} />
+            </NavBtnContainer>
+            <Sidenav isOpen={open} handleSidenavClick={handleSidenavClick} />
             <LogoContainer to="/">
                 <Image src={Logo} alt="logo" />
             </LogoContainer>
