@@ -4,12 +4,34 @@ import ModernButton from "../modern-button/modern-button.component";
 
 import { HeroContainer, HeroTitle, HeroSubtitle } from "./hero.styles";
 
-const Hero = ({ title, subtitle, ...props }) => {
+const Hero = ({
+    title,
+    subtitle,
+    route,
+    btnTitle,
+    backgroundSizeClass,
+    children,
+    textWidth50,
+    ...props
+}) => {
     return (
-        <HeroContainer {...props}>
-            <HeroTitle>{title}</HeroTitle>
-            <HeroSubtitle>{subtitle}</HeroSubtitle>
-            <ModernButton route="/shop" title="Shop Now" />
+        <HeroContainer
+            {...props}
+            className={backgroundSizeClass ? backgroundSizeClass : null}
+        >
+            <HeroTitle className={textWidth50 ? "text-width-50" : null}>
+                {title}
+            </HeroTitle>
+            <HeroSubtitle className={textWidth50 ? "text-width-50" : null}>
+                {subtitle}
+            </HeroSubtitle>
+            {route && btnTitle ? (
+                <ModernButton
+                    route={route}
+                    title={btnTitle}
+                    whiteAndTransparent
+                />
+            ) : null}
         </HeroContainer>
     );
 };

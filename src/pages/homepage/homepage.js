@@ -10,8 +10,11 @@ const Homepage = () => (
     <HomePageContainer>
         <Hero
             backgroundImage={image}
+            backgroundSizeClass="large"
             title="Stay Hard"
             subtitle="A Tribute to the hardest man alive"
+            route="/shop"
+            btnTitle="Shop Now"
         />
         <Directory />
     </HomePageContainer>

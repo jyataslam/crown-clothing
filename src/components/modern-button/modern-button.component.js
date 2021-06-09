@@ -2,8 +2,8 @@ import React from "react";
 
 import { ModernLink } from "./modern-button.styles";
 
-const ModernButton = ({ title, route }) => (
-    <ModernLink to={route} whiteAndTransparent>
+const ModernButton = ({ title, route, ...props }) => (
+    <ModernLink to={route} {...props}>
         {title}
     </ModernLink>
 );

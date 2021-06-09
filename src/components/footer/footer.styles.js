@@ -17,6 +17,19 @@ export const FooterSection = styled.footer`
     }
 `;
 
+export const DisclaimerContainer = styled.div`
+    width: 100%;
+    padding-top: 2rem;
+
+    @media screen and (max-width: 800px) {
+        padding-top: 0;
+    }
+
+    p {
+        font-size: 10px;
+    }
+`;
+
 export const FourthContainer = styled.div`
     width: 25%;
     display: flex;

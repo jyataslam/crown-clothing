@@ -2,10 +2,13 @@ import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
 import { connect } from "react-redux";
 
+import Hero from "../../components/hero/hero.component";
 import CollectionsOverviewContainer from "../../components/collections-overview/collections-overview.container";
 import CollectionPageContainer from "../collection/collection.container";
 
 import { fetchCollectionsStart } from "../../redux/shop/shop.actions";
+
+import image from "../../assets/images/shop_image.jpg";
 
 import "./shop-page.styles.scss";
 
@@ -17,6 +20,16 @@ const ShopPage = ({ fetchCollectionsStart, match }) => {
 
     return (
         <div className="shop-page">
+            {match.isExact ? (
+                <Hero
+                    backgroundImage={image}
+                    backgroundSizeClass="small"
+                    title="Summer Collection"
+                    subtitle="Summer 2021 is here!"
+                    subpageAlignLeft
+                    textWidth50
+                />
+            ) : null}
             <Route
                 exact
                 path={`${match.path}`}

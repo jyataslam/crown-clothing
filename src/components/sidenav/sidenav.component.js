@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
+import { SocialIcon } from "react-social-icons";
 
 import SidenavUserIcon from "../sidenav-icon/sidenav-icon.component";
 
@@ -19,6 +20,7 @@ import {
     LinksContainer,
     LinkContainer,
     SidenavLink,
+    SocialLinksContainer,
 } from "./sidenav.styles";
 
 const Sidenav = ({ isOpen, handleSidenavClick, currentUser, signOutStart }) => (
@@ -65,11 +67,6 @@ const Sidenav = ({ isOpen, handleSidenavClick, currentUser, signOutStart }) => (
                     about
                 </SidenavLink>
             </LinkContainer>
-            <LinkContainer>
-                <SidenavLink to="/contact" onClick={handleSidenavClick}>
-                    contact
-                </SidenavLink>
-            </LinkContainer>
             {currentUser ? (
                 <LinkContainer>
                     <SidenavLink onClick={signOutStart}>sign out</SidenavLink> /{" "}
@@ -83,6 +80,26 @@ const Sidenav = ({ isOpen, handleSidenavClick, currentUser, signOutStart }) => (
                 </LinkContainer>
             )}
         </LinksContainer>
+        <SocialLinksContainer>
+            <SocialIcon
+                url="https://www.instagram.com/davidgoggins/"
+                bgColor="transparent"
+                fgColor="#565454"
+                style={{ height: "40px", width: "40px" }}
+            />
+            <SocialIcon
+                url="https://twitter.com/davidgoggins"
+                bgColor="transparent"
+                fgColor="#565454"
+                style={{ height: "40px", width: "40px" }}
+            />
+            <SocialIcon
+                url="https://www.facebook.com/iamdavidgoggins"
+                bgColor="transparent"
+                fgColor="#565454"
+                style={{ height: "40px", width: "40px" }}
+            />
+        </SocialLinksContainer>
     </SidenavMain>
 );
 

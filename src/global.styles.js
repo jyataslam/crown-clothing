@@ -24,4 +24,35 @@ export const GlobalStyle = createGlobalStyle`
             margin-top: 50px;
         }
     }
+
+    .large {
+        height: 600px !important;
+
+        @media screen and (max-width: 800px) {
+            height: 520px !important;
+        }
+    }
+
+    .small {
+        height: 500px !important;
+
+        @media screen and (max-width: 800px) {
+            height: 300px !important;
+        }
+    }
+
+    .text-width-50 {
+        width: 50%;
+
+        @media screen and (max-width: 550px) {
+            width: 100%;
+        }
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus,
+    button:focus {
+        outline: none;
+    }
 `;

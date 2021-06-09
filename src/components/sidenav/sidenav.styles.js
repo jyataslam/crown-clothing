@@ -74,3 +74,9 @@ export const SidenavLink = styled(Link)`
     text-transform: uppercase;
     padding-right: 5px;
 `;
+
+export const SocialLinksContainer = styled.div`
+    margin: 0 12px;
+    padding: 16px 0;
+    display: flex;
+`;

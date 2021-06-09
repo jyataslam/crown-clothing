@@ -5,6 +5,11 @@ const defaultButtonStyles = css`
     border-color: #131313;
     background: none;
     color: #131313;
+
+    &:hover {
+        background: #131313;
+        color: white;
+    }
 `;
 
 const whiteAndTransparentStyles = css`
@@ -19,6 +24,7 @@ const whiteAndTransparentStyles = css`
 `;
 
 const getButtonStyles = props => {
+    console.log("modern btn props", props);
     if (props.whiteAndTransparent) {
         return whiteAndTransparentStyles;
     }
