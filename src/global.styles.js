@@ -49,6 +49,10 @@ export const GlobalStyle = createGlobalStyle`
         }
     }
 
+    .background-position-center {
+        background-position: top center;
+    }
+
     input:focus,
     select:focus,
     textarea:focus,

@@ -12,12 +12,13 @@ const Hero = ({
     backgroundSizeClass,
     children,
     textWidth50,
+    backgroundPositionCenter,
     ...props
 }) => {
     return (
         <HeroContainer
             {...props}
-            className={backgroundSizeClass ? backgroundSizeClass : null}
+            className={`${backgroundSizeClass} ${backgroundPositionCenter}`}
         >
             <HeroTitle className={textWidth50 ? "text-width-50" : null}>
                 {title}

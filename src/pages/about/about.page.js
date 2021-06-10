@@ -2,7 +2,7 @@ import React from "react";
 
 import Hero from "../../components/hero/hero.component";
 
-import image from "../../assets/images/hero_homepage.jpg";
+import image from "../../assets/images/uniform_dark.jpg";
 
 import {
     AboutWrapper,
@@ -16,18 +16,23 @@ const AboutPage = () => {
         <section>
             <Hero
                 title="about"
+                subtitle="about this site"
                 backgroundSizeClass="small"
                 backgroundImage={image}
+                subpageAlignLeft
+                textWidth50
+                backgroundPositionCenter="background-position-center"
             />
             <AboutWrapper>
                 <CategoryHeading>about stay hard</CategoryHeading>
                 <CategoryDescription>
-                    My name is Jason Yata and I made Stay Hard as a tribute to
-                    David Goggins as well as to showcase my ability to create a
-                    fully functioning e-commerce website built entirely from the
-                    ground up. I needed some sort of theme to use and what
-                    better to use than the man, the myth, the legend, Mr.
-                    Goggins himself. <br></br>
+                    I'm a front end developer and I made Stay Hard as a tribute
+                    to David Goggins as well as to showcase my ability to create
+                    a fully functioning e-commerce website built entirely from
+                    the ground up. I needed a theme and who better to draw
+                    inspiration from than the man who has driven me to pursue my
+                    passion of code from the beginning...Mr. David Goggins
+                    himself.<br></br>
                     <br></br>
                     <i>
                         This is strictly a <b>TEST</b> website and no actual
