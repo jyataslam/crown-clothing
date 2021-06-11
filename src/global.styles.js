@@ -8,6 +8,7 @@ export const GlobalStyle = createGlobalStyle`
     body {
         font-family: 'Poppins', sans-serif;
         letter-spacing: 1px;
+        font-size: 14px;
 
         @media screen and (max-width: 800px) {
             padding: 10px;
@@ -51,6 +52,11 @@ export const GlobalStyle = createGlobalStyle`
 
     .background-position-center {
         background-position: top center;
+    }
+
+    .space-between {
+        display: flex;
+        justify-content: space-between;
     }
 
     input:focus,

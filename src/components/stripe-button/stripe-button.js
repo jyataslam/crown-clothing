@@ -7,13 +7,15 @@ const StripeCheckoutButton = ({ price }) => {
         "pk_test_51InuFVEPPNpu3gxmBtPxanu4efdMNCzkPLgYZp3QmUdWntK6cvPSf6Zs6oOtX1cSY0Rk7sVMnI51gttNa9spOfrf000AaLCpTY";
 
     const onToken = token => {
-        alert("Payment successful! Thanks for testing out my app :)");
+        alert(
+            "Payment successful! Thanks for testing out my app and STAY HARD"
+        );
     };
 
     return (
         <StripeCheckout
-            label="Pay Now"
-            name="Power Up"
+            label="SECURE CHECKOUT"
+            name="Stay Hard"
             billingAddress
             shippingAddress
             image="https://i.ibb.co/fH3q01r/stripe-logo.jpg"

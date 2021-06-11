@@ -15,34 +15,46 @@ import "./checkout.scss";
 const CheckoutPage = ({ cartItems, cartTotal }) => (
     <div className="checkout-page">
         <div className="checkout-header">
-            <div className="header-blocks">
-                <span>Product</span>
+            <h2>Cart</h2>
+        </div>
+        <div className="checkout-flex-wrapper">
+            <div className="checkout-items-container">
+                {cartItems.map((item, index) => (
+                    <CheckoutItem key={index} cartItem={item} />
+                ))}
             </div>
-            <div className="header-blocks">
-                <span>Description</span>
-            </div>
-            <div className="header-blocks">
-                <span>Quantity</span>
-            </div>
-            <div className="header-blocks">
-                <span>Price</span>
-            </div>
-            <div className="header-blocks">
-                <span>Remove</span>
+            <div className="checkout-total-container">
+                <div className="total">
+                    <span className="header">
+                        order summary: {cartItems.length} items
+                    </span>
+                </div>
+                <div className="total">
+                    <div className="space-between">
+                        <span>subtotal</span>
+                        <span>${cartTotal}</span>
+                    </div>
+                    <div className="space-between">
+                        <span>shipping</span>
+                        <span>free</span>
+                    </div>
+                </div>
+                <div className="total">
+                    <div className="space-between">
+                        <span>total</span>
+                        <span>${cartTotal}</span>
+                    </div>
+                </div>
+                <div className="total">
+                    <span className="red center">
+                        *Please use the following TEST credit card for payments*
+                    </span>
+                    <span className="red">4242 4242 4242 4242</span>
+                    <span className="red">Exp: 01/45 - CVV: 123</span>
+                    <StripeCheckoutButton price={cartTotal} />
+                </div>
             </div>
         </div>
-        {cartItems.map((item, index) => (
-            <CheckoutItem key={index} cartItem={item} />
-        ))}
-        <div className="total">
-            <span>TOTAL: ${cartTotal}</span>
-        </div>
-        <div className="test-warning">
-            *Please use the following TEST credit card for payments*
-            <br />
-            4242 4242 4242 4242 - Exp: 01/45 - CVV: 123
-        </div>
-        <StripeCheckoutButton price={cartTotal} />
     </div>
 );
 

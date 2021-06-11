@@ -6,28 +6,50 @@ import "./checkout-item.scss";
 
 const CheckoutItem = ({ cartItem, clearItemFromCart, addItem, removeItem }) => {
     const { name, imageUrl, price, quantity } = cartItem;
+    console.log(price);
+    const totalIndividualPrice = price * quantity;
     return (
         <div className="checkout-item">
-            <div className="image-container">
-                <img src={imageUrl} alt="item" />
+            <div className="item-container">
+                <div className="image-container">
+                    <img src={imageUrl} alt="item" />
+                </div>
+                <div className="description-container">
+                    <span className="name">{name}</span>
+                    <span className="quantity">
+                        <div
+                            className="arrow"
+                            onClick={() => removeItem(cartItem)}
+                        >
+                            -
+                        </div>
+                        <span className="value">{quantity}</span>
+                        <div
+                            className="arrow"
+                            onClick={() => addItem(cartItem)}
+                        >
+                            +
+                        </div>
+                    </span>
+                    <div className="price-container">
+                        <span className="price">${totalIndividualPrice}</span>
+                        {quantity > 1 ? (
+                            <span className="quantity-multiplier">
+                                {quantity}x{" "}
+                                <span className="individual">${price}</span>
+                            </span>
+                        ) : null}
+                    </div>
+                </div>
             </div>
-            <span className="name">{name}</span>
-            <span className="quantity">
-                <div className="arrow" onClick={() => removeItem(cartItem)}>
-                    &#10094;
-                </div>
-                <span className="value">{quantity}</span>
-                <div className="arrow" onClick={() => addItem(cartItem)}>
-                    &#10095;
-                </div>
-            </span>
-            <span className="price">${price}</span>
-            <span
-                className="remove-button"
-                onClick={() => clearItemFromCart(cartItem)}
-            >
-                &#10005;
-            </span>
+            <div className="remove-container">
+                <span
+                    className="remove-button"
+                    onClick={() => clearItemFromCart(cartItem)}
+                >
+                    remove
+                </span>
+            </div>
         </div>
     );
 };

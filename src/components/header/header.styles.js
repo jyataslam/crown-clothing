@@ -20,6 +20,7 @@ export const HeaderContainer = styled.div`
 
     @media screen and (max-width: 800px) {
         position: fixed;
+        border-bottom: 1px solid #eee;
         top: 0;
         left: 0;
         height: 60px;
