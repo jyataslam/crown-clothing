@@ -25,7 +25,6 @@ const Footer = () => {
                 <SectionHeader>Quick Links</SectionHeader>
                 <QuickLink to="/shop">Shop</QuickLink>
                 <QuickLink to="/about">About</QuickLink>
-                <QuickLink to="/contact">Contact</QuickLink>
             </FourthContainer>
             <FourthContainer>
                 <SectionHeader>Stay Hard Newsletter</SectionHeader>

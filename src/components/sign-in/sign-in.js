@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { connect } from "react-redux";
+import { connect, useSelector } from "react-redux";
 
 import FormInput from "../../components/form-input/form-input";
 import CustomButton from "../custom-button/custom-button";
@@ -10,11 +10,13 @@ import {
     emailSignInStart,
 } from "../../redux/user/user.actions";
 
-const SignIn = ({ emailSignInStart, googleSignInStart }) => {
+const SignIn = ({ emailSignInStart, googleSignInStart, error }) => {
     const [userCredentials, setCredentials] = useState({
         email: "",
         password: "",
     });
+
+    const [isLoading, setLoading] = useState(false);
 
     const { email, password } = userCredentials;
 
@@ -34,7 +36,6 @@ const SignIn = ({ emailSignInStart, googleSignInStart }) => {
         <div className="sign-in">
             <h2 className="title">Already have an account?</h2>
             <span>Sign in or get started with a Google account</span>
-
             <form onSubmit={handleSubmit}>
                 <FormInput
                     type="email"
@@ -54,6 +55,9 @@ const SignIn = ({ emailSignInStart, googleSignInStart }) => {
                 />
                 <div className="buttons">
                     <CustomButton type="submit" className="sign-in-btn">
+                        <span
+                            className={`spinner ${isLoading ? "show" : ""}`}
+                        ></span>{" "}
                         Sign In
                     </CustomButton>
                     <CustomButton
@@ -64,6 +68,9 @@ const SignIn = ({ emailSignInStart, googleSignInStart }) => {
                         Sign In With Google
                     </CustomButton>
                 </div>
+                <p className={`error ${error !== null ? "show" : ""}`}>
+                    incorrect email and/or password
+                </p>
             </form>
         </div>
     );
@@ -75,4 +82,8 @@ const mapDispatchToProps = dispatch => ({
         dispatch(emailSignInStart({ email, password })),
 });
 
-export default connect(null, mapDispatchToProps)(SignIn);
+const mapStateToProps = state => ({
+    error: state.user.error,
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(SignIn);

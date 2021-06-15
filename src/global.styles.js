@@ -39,6 +39,7 @@ export const GlobalStyle = createGlobalStyle`
 
         @media screen and (max-width: 800px) {
             height: 300px !important;
+            justify-content: flex-end;
         }
     }
 
@@ -51,7 +52,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     .background-position-center {
-        background-position: top center;
+        background-position: top center !important;
     }
 
     .space-between {

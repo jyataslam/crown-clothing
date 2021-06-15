@@ -24,7 +24,6 @@ const whiteAndTransparentStyles = css`
 `;
 
 const getButtonStyles = props => {
-    console.log("modern btn props", props);
     if (props.whiteAndTransparent) {
         return whiteAndTransparentStyles;
     }

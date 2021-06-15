@@ -15,4 +15,16 @@
         font-size: 2rem;
         line-height: 1.2;
     }
+
+    .error {
+        color: red;
+        text-transform: uppercase;
+        font-weight: bold;
+        opacity: 0;
+        transition: opacity .5s ease-in-out;
+
+        &.show {
+            opacity: 1;
+        }
+    }
 }

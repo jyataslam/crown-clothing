@@ -1,6 +1,11 @@
 .collection-page {
   display: flex;
   flex-direction: column;
+  margin-top: 2rem;
+
+  @media screen and (max-width: 800px) {
+    margin-top: 5rem;
+  }
 
   .title {
     font-size: 38px;

@@ -49,8 +49,6 @@ const Header = ({ currentUser, hidden, signOutStart }) => {
         };
     }, [scrolled]);
 
-    console.log(open);
-
     return (
         <HeaderContainer size={scrolled}>
             <NavBtnContainer>

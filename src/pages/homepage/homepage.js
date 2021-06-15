@@ -4,7 +4,7 @@ import Hero from "../../components/hero/hero.component";
 
 import { HomePageContainer } from "./homepage.styles";
 
-import image from "../../assets/images/hero_homepage.jpg";
+import image from "../../assets/images/goggins_running_in_ocean.jpeg";
 
 const Homepage = () => (
     <HomePageContainer>
@@ -15,6 +15,7 @@ const Homepage = () => (
             subtitle="A Tribute to the hardest man alive"
             route="/shop"
             btnTitle="Shop Now"
+            backgroundPositionCenter="background-position-center"
         />
         <Directory />
     </HomePageContainer>

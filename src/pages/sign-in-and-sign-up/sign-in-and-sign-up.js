@@ -4,7 +4,6 @@ import SignIn from "../../components/sign-in/sign-in";
 import SignUp from "../../components/sign-up/sign-up";
 
 import GogginsLogo from "../../assets/images/goggins_logo.png";
-import BgImage from "../../assets/images/uniform_large.jpg";
 
 import "./sign-in-and-sign-up.styles.scss";
 

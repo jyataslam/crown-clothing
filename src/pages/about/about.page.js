@@ -2,7 +2,7 @@ import React from "react";
 
 import Hero from "../../components/hero/hero.component";
 
-import image from "../../assets/images/uniform_dark.jpg";
+import image from "../../assets/images/hero_about.jpg";
 
 import {
     AboutWrapper,
@@ -15,8 +15,6 @@ const AboutPage = () => {
     return (
         <section>
             <Hero
-                title="about"
-                subtitle="about this site"
                 backgroundSizeClass="small"
                 backgroundImage={image}
                 subpageAlignLeft

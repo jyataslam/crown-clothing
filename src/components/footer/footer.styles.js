@@ -5,7 +5,7 @@ export const FooterSection = styled.footer`
     width: 100%;
     max-width: 1440px;
     margin: 3rem auto 0;
-    padding: 7rem 4.16667% 7rem;
+    padding: 7rem 4.16667% 3rem;
     display: flex;
     justify-content: center;
     background-color: #fafafa;

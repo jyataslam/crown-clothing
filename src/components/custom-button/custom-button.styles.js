@@ -58,6 +58,7 @@ export const CustomButtonContainer = styled.button`
     box-sizing: border-box;
     display: flex;
     justify-content: center;
+    align-items: center;
     transition: all 0.15s ease-in-out;
 
     ${getButtonStyles}
