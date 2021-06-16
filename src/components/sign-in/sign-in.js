@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { connect, useSelector } from "react-redux";
+import { connect } from "react-redux";
 
 import FormInput from "../../components/form-input/form-input";
 import CustomButton from "../custom-button/custom-button";
@@ -23,7 +23,9 @@ const SignIn = ({ emailSignInStart, googleSignInStart, error }) => {
     const handleSubmit = async event => {
         event.preventDefault();
 
+        setLoading(true);
         emailSignInStart(email, password);
+        setLoading(false);
     };
 
     const handleChange = event => {
