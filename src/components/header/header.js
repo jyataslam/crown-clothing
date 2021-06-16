@@ -26,14 +26,14 @@ import {
 } from "./header.styles";
 
 const Header = ({ currentUser, hidden, signOutStart }) => {
-    const [scrolled, setScrolled] = useState("100px");
+    const [scrolled, setScrolled] = useState(false);
     const [open, isOpen] = useState(false);
 
     const handleScroll = () => {
         if (window.scrollY >= 40) {
-            setScrolled("70px");
+            setScrolled(true);
         } else if (window.scrollY < 40) {
-            setScrolled("100px");
+            setScrolled(false);
         }
     };
 
@@ -50,30 +50,60 @@ const Header = ({ currentUser, hidden, signOutStart }) => {
     }, [scrolled]);
 
     return (
-        <HeaderContainer size={scrolled}>
+        <HeaderContainer
+            size={scrolled}
+            className={scrolled ? "scrolled" : "null"}
+        >
             <NavBtnContainer>
-                <Hamburger src={HamburgerOpen} onClick={handleSidenavClick} />
+                <Hamburger
+                    src={HamburgerOpen}
+                    onClick={handleSidenavClick}
+                    className={scrolled ? "scrolled" : "null"}
+                />
             </NavBtnContainer>
             <Sidenav isOpen={open} handleSidenavClick={handleSidenavClick} />
-            <LogoContainer to="/">
-                <Image src={Logo} alt="logo" />
-            </LogoContainer>
             <OptionsContainer>
-                <OptionLink to="/shop">Shop</OptionLink>
-                <OptionLink to="/about">About</OptionLink>
+                <OptionLink
+                    to="/shop"
+                    className={scrolled ? "scrolled" : "null"}
+                >
+                    Shop
+                </OptionLink>
+                <OptionLink
+                    to="/about"
+                    className={scrolled ? "scrolled" : "null"}
+                >
+                    About
+                </OptionLink>
                 {currentUser ? (
-                    <OptionLink as="div" onClick={signOutStart}>
+                    <OptionLink
+                        as="div"
+                        onClick={signOutStart}
+                        className={scrolled ? "scrolled" : "null"}
+                    >
                         SIGN OUT
                     </OptionLink>
                 ) : (
-                    <OptionLink to="/signin">SIGN IN</OptionLink>
+                    <OptionLink
+                        to="/signin"
+                        className={scrolled ? "scrolled" : "null"}
+                    >
+                        SIGN IN
+                    </OptionLink>
                 )}
             </OptionsContainer>
+            <LogoContainer to="/">
+                <Image
+                    src={Logo}
+                    alt="david goggins stay hard logo"
+                    className={scrolled ? "scrolled" : "null"}
+                />
+            </LogoContainer>
             <ShopButtonContainer>
                 {currentUser !== null ? (
                     <UserIcon username={currentUser.displayName} />
                 ) : null}
-                <CartIcon />
+                <CartIcon scrolled={scrolled} />
                 {hidden ? null : <CartDropdown />}
             </ShopButtonContainer>
         </HeaderContainer>

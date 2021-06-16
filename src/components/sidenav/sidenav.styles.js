@@ -12,7 +12,7 @@ export const SidenavMain = styled.div`
     padding: 15px;
     overflow-y: scroll;
     transform: translateX(-100%);
-    transition: 0.4s ease-in-out;
+    transition: 0.2s ease-in-out;
 
     &.open {
         transform: translateX(0);

@@ -4,21 +4,21 @@ const INITIAL_STATE = {
     sections: [
         {
             title: "mens",
-            imageUrl: "https://i.ibb.co/R70vBrQ/men.png",
+            imageUrl: "https://i.ibb.co/0nD60SS/mens-min.jpg",
             size: "large",
             id: 5,
             linkUrl: "shop/mens",
         },
         {
             title: "womens",
-            imageUrl: "https://i.ibb.co/GCCdy8t/womens.png",
+            imageUrl: "https://i.ibb.co/2Wmjn6n/womens-min.jpg",
             size: "large",
             id: 4,
             linkUrl: "shop/womens",
         },
         {
             title: "hats",
-            imageUrl: "https://i.ibb.co/cvpntL1/hats.png",
+            imageUrl: "https://i.ibb.co/0n2xwzB/hats-min.jpg",
             id: 1,
             linkUrl: "shop/hats",
         },

@@ -40,6 +40,7 @@ const NewsletterWidget = () => {
                 type="email"
                 name="email"
                 placeholder="EMAIL ADDRESS"
+                required
                 value={email}
                 onChange={handleChange}
             />

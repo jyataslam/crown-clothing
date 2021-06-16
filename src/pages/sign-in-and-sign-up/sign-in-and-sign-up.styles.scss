@@ -1,5 +1,4 @@
 .sign-in-and-sign-up {
-    max-width: 1440px;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -24,18 +23,22 @@
 
         @media screen and (max-width: 800px) {
             padding: 60px 5% 60px;
-            height: 350px;
+            height: 50vh;
+            background-position: center;
         }
 
         @media screen and (max-width: 550px) {
-            height: 300px;
-            align-items: center;
+            justify-content: flex-end;
+            padding-top: 100px;
+            height: 38vh;
+            align-items: flex-start;
+            justify-content: flex-start;
             background-position: center top;
         }
 
         .sign-in-content {
-            width: 50%;
-            padding-left: 100px;
+            width: 60%;
+            padding-left: 250px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -46,8 +49,9 @@
             }
 
             @media screen and (max-width: 500px) {
-                width: 100%;
+                width: 70%;
                 padding-left: 0;
+                text-align: left;
             }
 
             .logo {
@@ -59,7 +63,7 @@
                 }
     
                 @media screen and (max-width: 550px) {
-                    height: unset;
+                    display: none;
                 }
             }
     
@@ -69,6 +73,7 @@
                 text-align: center;
                 font-size: 2.5rem;
                 line-height: 1.2;
+                font-weight: 500;
     
                 @media screen and (max-width: 800px) {
                     font-size: 22px;
@@ -88,6 +93,7 @@
 
         @media screen and (max-width: 800px) {
             flex-direction: column;
+            padding: 0 1rem;
         }
     }
 }

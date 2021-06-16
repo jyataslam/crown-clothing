@@ -6,17 +6,25 @@ import { UserIconContainer } from "../user-icon/user-icon.styles";
 export const HeaderContainer = styled.div`
     height: ${props => props.size};
     width: 100%;
-    max-width: 1440px;
+    /* max-width: 1440px; */
     margin: 0 auto;
-    padding: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
+    position: fixed;
+    border-bottom: 1px solid #96969683;
     top: 0;
-    background: white;
+    left: 0;
+    height: 60px;
+    padding: 5px 25px;
+    margin-bottom: 0;
+    background: transparent;
     z-index: 10;
-    transition: height 0.3s ease-in-out;
+    transition: all 0.5s ease-in-out;
+
+    &.scrolled {
+        background: white;
+    }
 
     @media screen and (max-width: 800px) {
         position: fixed;
@@ -26,7 +34,7 @@ export const HeaderContainer = styled.div`
         height: 60px;
         padding: 10px;
         margin-bottom: 0;
-        background: white;
+        background: transparent;
         z-index: 10;
     }
 
@@ -39,7 +47,6 @@ export const HeaderContainer = styled.div`
 
 export const LogoContainer = styled(Link)`
     height: 100%;
-    width: 15%;
 
     @media screen and (max-width: 800px) {
         width: unset;
@@ -49,14 +56,22 @@ export const LogoContainer = styled(Link)`
 export const Image = styled.img`
     height: 100%;
     width: auto;
+    -webkit-filter: invert(1);
+    filter: invert(1);
+    transition: all 0.5s ease-in-out;
+
+    &.scrolled {
+        -webkit-filter: unset;
+        filter: unset;
+    }
 `;
 
 export const OptionsContainer = styled.div`
     height: 100%;
-    width: 70%;
+    width: 25%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 
     @media screen and (max-width: 800px) {
         display: none;
@@ -64,7 +79,7 @@ export const OptionsContainer = styled.div`
 `;
 
 export const ShopButtonContainer = styled.div`
-    width: 15%;
+    width: 25%;
     position: relative;
     display: flex;
     align-items: center;
@@ -72,20 +87,43 @@ export const ShopButtonContainer = styled.div`
 `;
 
 export const OptionLink = styled(Link)`
+    position: relative;
     padding: 10px 15px;
     cursor: pointer;
     text-transform: uppercase;
     font-size: 0.875rem;
-    color: #757575;
-    transition: color 0.2s ease-in-out;
+    color: white;
+    font-weight: 500;
+    transition: all 0.5s ease-in-out;
+
+    &.scrolled {
+        color: black;
+
+        &:after {
+            background: black;
+        }
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: white;
+        height: 2px;
+        width: 0;
+        transition: all 0.2s ease-in-out;
+    }
 
     &:hover {
-        color: black;
+        &:after {
+            width: 100%;
+        }
     }
 `;
 
 export const NavBtnContainer = styled.div`
-    width: 15%;
+    width: 25%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -100,4 +138,12 @@ export const NavBtnContainer = styled.div`
 export const Hamburger = styled.img`
     width: auto;
     height: 100%;
+    -webkit-filter: invert(1);
+    filter: invert(1);
+    transition: all 0.5s ease-in-out;
+
+    &.scrolled {
+        -webkit-filter: unset;
+        filter: unset;
+    }
 `;

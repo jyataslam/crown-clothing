@@ -8,9 +8,11 @@ import { selectCartItemsCount } from "../../redux/cart/cart.selectors";
 import { ReactComponent as ShoppingIcon } from "../../assets/images/shopping-bag.svg";
 import "./cart-icon.styles.scss";
 
-const CartIcon = ({ toggleCartHidden, itemCount }) => (
+const CartIcon = ({ toggleCartHidden, itemCount, scrolled }) => (
     <div className="cart-icon" onClick={toggleCartHidden}>
-        <ShoppingIcon className="shopping-icon" />
+        <ShoppingIcon
+            className={`shopping-icon ${scrolled ? "scrolled" : "null"}`}
+        />
         <span className="item-count">{itemCount}</span>
     </div>
 );

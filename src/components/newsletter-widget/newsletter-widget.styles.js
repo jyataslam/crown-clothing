@@ -4,13 +4,20 @@ export const NewsLetterWidgetMain = styled.div`
     width: 100%;
     max-width: 260px;
     height: auto;
-    color: #131313;
+    color: white;
     display: flex;
     flex-direction: column;
     padding: 10px 0;
 
     a {
         min-width: 100%;
+        border: 1px solid white;
+        color: white;
+
+        &:hover {
+            color: black;
+            background: white;
+        }
     }
 `;
 
@@ -26,7 +33,8 @@ export const EmailInput = styled.input`
     margin-bottom: 20px;
     background: none;
     border: none;
-    border-bottom: 1px solid #131313;
+    color: white;
+    border-bottom: 1px solid #838383;
     padding-left: 0;
     text-transform: uppercase;
 `;

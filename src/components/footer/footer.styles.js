@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 
 export const FooterSection = styled.footer`
     width: 100%;
-    max-width: 1440px;
     margin: 3rem auto 0;
     padding: 7rem 4.16667% 3rem;
     display: flex;
     justify-content: center;
-    background-color: #fafafa;
+    background-color: #0c1013;
+    color: white;
     text-transform: uppercase;
     flex-wrap: wrap;
 
@@ -27,6 +27,10 @@ export const DisclaimerContainer = styled.div`
 
     p {
         font-size: 10px;
+
+        a {
+            color: white;
+        }
     }
 `;
 
@@ -39,7 +43,7 @@ export const FourthContainer = styled.div`
     @media screen and (max-width: 800px) {
         width: 50%;
         padding-bottom: 2rem;
-        border-bottom: 1px solid #d8d8d8;
+        border-bottom: 1px solid #5c5c5c;
         margin-top: 2.5rem;
         align-items: center;
 
@@ -53,7 +57,7 @@ export const FourthContainer = styled.div`
         width: 100%;
 
         &:nth-child(3) {
-            border-bottom: 1px solid #d8d8d8;
+            border-bottom: 1px solid #5c5c5c;
         }
     }
 `;
@@ -69,7 +73,8 @@ export const SectionHeader = styled.h4`
 `;
 
 export const QuickLink = styled(Link)`
-    color: #565454;
+    /* color: #565454; */
+    color: #d6d6d6;
     font-size: 0.875rem;
     padding: 5px 0;
 `;

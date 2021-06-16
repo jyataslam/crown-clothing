@@ -3,7 +3,7 @@ import { SocialIcon } from "react-social-icons";
 
 import NewsletterWidget from "../newsletter-widget/newsletter-widget.component";
 
-import logo from "../../assets/images/logo_footer.png";
+import logo from "../../assets/images/logo_white.png";
 
 import {
     FooterSection,
@@ -36,17 +36,17 @@ const Footer = () => {
                     <SocialIcon
                         url="https://www.instagram.com/davidgoggins/"
                         bgColor="transparent"
-                        fgColor="#565454"
+                        fgColor="#d6d6d6"
                     />
                     <SocialIcon
                         url="https://twitter.com/davidgoggins"
                         bgColor="transparent"
-                        fgColor="#565454"
+                        fgColor="#d6d6d6"
                     />
                     <SocialIcon
                         url="https://www.facebook.com/iamdavidgoggins"
                         bgColor="transparent"
-                        fgColor="#565454"
+                        fgColor="#d6d6d6"
                     />
                 </SocialIconContainer>
             </FourthContainer>

@@ -35,36 +35,35 @@ const getHeroContainerStyles = props => {
 
 export const HeroContainer = styled.div`
     background: ${props => `url('${props.backgroundImage}')`};
-    width: 100%;
-    max-width: 1440px;
     margin: 0 auto 15px;
     background-size: cover;
     background-position: top;
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    justify-content: flex-end;
+    align-items: flex-start;
     flex-direction: column;
-    padding: 20px 6rem;
+    padding: 3rem;
     color: white;
-    border-left: 7.5px solid white;
-    border-right: 7.5px solid white;
+    width: 65%;
+    margin-left: 0;
+    height: 100vh;
 
     @media screen and (max-width: 800px) {
-        padding: 2rem;
+        padding: 3rem;
         border: none;
+        width: 100%;
+        margin-bottom: 0;
+        height: 50vh;
     }
 
     @media screen and (max-width: 550px) {
         border: none;
-        height: 520px;
         background-position-x: 10%;
         color: white;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        padding-bottom: 4rem;
+        padding: 0 2rem 2rem;
         justify-content: flex-end;
-        text-align: center;
-        align-items: center;
+        text-align: left;
+        align-items: flex-start;
         background-position-x: 10%;
     }
 
@@ -98,6 +97,8 @@ export const HeroSubtitle = styled.h3`
     letter-spacing: 3px;
     line-height: 1.2em;
     padding-top: 12px;
+    padding-bottom: 12px;
+    font-weight: 500;
     width: ${props =>
         props.theme.themeWidth50
             ? props.theme.themeWidth50

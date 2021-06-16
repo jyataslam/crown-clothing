@@ -1,4 +1,9 @@
 .shop-page {
-    max-width: 1440px;
     margin: auto;
+
+    div {
+        &:first-child {
+            background-position: center;
+        }
+    }
 }

@@ -6,7 +6,7 @@ export const AboutWrapper = styled.div`
     max-width: 1440px;
 
     @media screen and (max-width: 550px) {
-        padding: 0;
+        padding: 0 1rem;
     }
 `;
 

@@ -11,7 +11,7 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 14px;
 
         @media screen and (max-width: 800px) {
-            padding: 10px;
+            // padding: 10px;
         }
     }
 
@@ -22,7 +22,7 @@ export const GlobalStyle = createGlobalStyle`
 
     #root {
         @media screen and (max-width: 800px) {
-            margin-top: 50px;
+            // margin-top: 50px;
         }
     }
 
@@ -36,9 +36,10 @@ export const GlobalStyle = createGlobalStyle`
 
     .small {
         height: 500px !important;
+        width: 100%;
 
         @media screen and (max-width: 800px) {
-            height: 300px !important;
+            height: 400px !important;
             justify-content: flex-end;
         }
     }
