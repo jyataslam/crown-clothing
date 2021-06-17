@@ -7,6 +7,7 @@ import {
     selectCartTotal,
 } from "../../redux/cart/cart.selectors";
 
+import Hero from "../../components/hero/hero.component";
 import CheckoutItem from "../../components/checkout-item/checkout";
 import StripeCheckoutButton from "../../components/stripe-button/stripe-button";
 
@@ -14,6 +15,11 @@ import "./checkout.scss";
 
 const CheckoutPage = ({ cartItems, cartTotal }) => (
     <div className="checkout-page">
+        <Hero
+            backgroundImage="https://i.ibb.co/0n2xwzB/hats-min.jpg"
+            backgroundPositionCenter="background-center"
+            backgroundSizeClass="x-small"
+        />
         <div className="checkout-header">
             <h2>Cart</h2>
         </div>

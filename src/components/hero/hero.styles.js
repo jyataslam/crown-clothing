@@ -53,11 +53,11 @@ export const HeroContainer = styled.div`
         border: none;
         width: 100%;
         margin-bottom: 0;
-        height: 50vh;
+        height: 60vh;
+        border-bottom: 2px solid white;
     }
 
     @media screen and (max-width: 550px) {
-        border: none;
         background-position-x: 10%;
         color: white;
         padding: 0 2rem 2rem;

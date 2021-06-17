@@ -41,17 +41,18 @@ export const Main = styled.div`
     align-items: flex-start;
     padding: 3rem;
     background-size: cover;
-    background-position: center;
+    background-position: top center;
 
     &:first-child {
         border-bottom: 2px solid white;
+        background-position: center;
 
         @media screen and (max-width: 800px) {
             border: none;
         }
 
         @media screen and (max-width: 550px) {
-            border-bottom: 1px solid white;
+            border-bottom: 2px solid white;
         }
     }
 
@@ -64,7 +65,7 @@ export const Main = styled.div`
     }
 
     @media screen and (max-width: 800px) {
-        height: 25vh;
+        height: 20vh;
         border: none;
     }
 

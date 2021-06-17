@@ -10,7 +10,9 @@ import {
 } from "./homepage.styles";
 
 import image from "../../assets/images/goggins_running_in_ocean.jpeg";
-import splitImage from "../../assets/images/hero_about.jpg";
+import splitImage from "../../assets/images/running_with_water_vest.jpg";
+import summerCollectionSplitImage from "../../assets/images/shop_image.jpg";
+import Ethos from "../../components/ethos/ethos.component";
 
 const Homepage = () => (
     <HomePageContainer>
@@ -25,7 +27,7 @@ const Homepage = () => (
             />
             <FlexContainerColumn>
                 <HeroSplit
-                    bgImage={splitImage}
+                    bgImage={summerCollectionSplitImage}
                     title="summer collection"
                     subtitle="gear up for the summer heat"
                     url="/shop"
@@ -38,6 +40,7 @@ const Homepage = () => (
                 />
             </FlexContainerColumn>
         </FlexContainer>
+        <Ethos />
         <Directory />
     </HomePageContainer>
 );

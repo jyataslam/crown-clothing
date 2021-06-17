@@ -44,6 +44,11 @@ export const GlobalStyle = createGlobalStyle`
         }
     }
 
+    .x-small {
+        height: 300px !important;
+        width: 100%;
+    }
+
     .text-width-50 {
         width: 50%;
 
@@ -54,6 +59,10 @@ export const GlobalStyle = createGlobalStyle`
 
     .background-position-center {
         background-position: top center !important;
+    }
+
+    .background-center {
+        background-position: center !important;
     }
 
     .space-between {

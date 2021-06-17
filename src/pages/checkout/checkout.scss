@@ -1,19 +1,17 @@
 .checkout-page {
-    max-width: 1440px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px auto 0;
 
     @media screen and (max-width: 800px) {
       margin: 0 auto;
-      margin-top: 4rem;
     }
 
     .empty {
       text-transform: uppercase;
       font-size: 1.6rem;
       text-align: center;
+      padding: 0 10px;
     }
 
     .checkout-flex-wrapper {
