@@ -24,14 +24,15 @@ export const HeaderContainer = styled.div`
 
     &.scrolled {
         background: white;
+        border-bottom: none;
     }
 
     @media screen and (max-width: 800px) {
         position: fixed;
         top: 0;
         left: 0;
-        height: 60px;
-        padding: 10px;
+        height: 45px;
+        padding: 5px;
         margin-bottom: 0;
         background: transparent;
         z-index: 10;

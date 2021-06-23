@@ -33,6 +33,11 @@ const Sidenav = ({ isOpen, handleSidenavClick, currentUser, signOutStart }) => (
         </SidenavHeader>
         <LinksContainer>
             <LinkContainer>
+                <SidenavLink to="/" onClick={handleSidenavClick}>
+                    home
+                </SidenavLink>
+            </LinkContainer>
+            <LinkContainer>
                 <SidenavLink to="/shop" onClick={handleSidenavClick}>
                     shop all
                 </SidenavLink>

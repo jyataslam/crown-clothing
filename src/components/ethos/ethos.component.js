@@ -2,7 +2,6 @@ import React from "react";
 
 import {
     Main,
-    Quote,
     Header,
     Subheader,
     IconsContainer,
@@ -12,14 +11,7 @@ import {
     EthoBackgroundImage,
     EthoHeader,
     EthoDescription,
-    QuoteSection,
-    QuoteOwnerContainer,
-    QuoteName,
-    QuoteTitle,
 } from "./ethos.styles";
-
-import Quotations from "../../assets/images/quotations.png";
-import Headshot from "../../assets/images/quote_headshot.jpg";
 
 import DayOneImage from "../../assets/images/pull-ups.jpg";
 import AccountabilityImage from "../../assets/images/accountability.jpg";
@@ -30,7 +22,7 @@ import UncommonImage from "../../assets/images/uncommon.jpg";
 
 const Ethos = () => (
     <Main>
-        <QuoteSection>
+        {/* <QuoteSection>
             <img
                 src={Quotations}
                 alt="double quotations"
@@ -49,7 +41,7 @@ const Ethos = () => (
                     className="headshot"
                 />
             </QuoteOwnerContainer>
-        </QuoteSection>
+        </QuoteSection> */}
         <EthosSection>
             <Header>Driven, not motivated</Header>
             <Subheader>

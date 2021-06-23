@@ -63,6 +63,9 @@ const Header = ({ currentUser, hidden, signOutStart }) => {
             </NavBtnContainer>
             <Sidenav isOpen={open} handleSidenavClick={handleSidenavClick} />
             <OptionsContainer>
+                <OptionLink to="/" className={scrolled ? "scrolled" : "null"}>
+                    Home
+                </OptionLink>
                 <OptionLink
                     to="/shop"
                     className={scrolled ? "scrolled" : "null"}

@@ -13,6 +13,8 @@ import image from "../../assets/images/goggins_running_in_ocean.jpeg";
 import splitImage from "../../assets/images/running_with_water_vest.jpg";
 import summerCollectionSplitImage from "../../assets/images/shop_image.jpg";
 import Ethos from "../../components/ethos/ethos.component";
+import SectionTitle from "../../components/section-title/section-title.component";
+import ImageBlockSplit from "../../components/image-block-split/image-block-split.component";
 
 const Homepage = () => (
     <HomePageContainer>
@@ -40,7 +42,16 @@ const Homepage = () => (
                 />
             </FlexContainerColumn>
         </FlexContainer>
+        <SectionTitle
+            title="Gear up for day one, week one"
+            subtitle="STAY HARD isn't only about the physical...it's about transforming your mind through a set of core ethos."
+        />
+        <ImageBlockSplit />
         <Ethos />
+        <SectionTitle
+            title="shop"
+            subtitle="Shop the latest shirts, leggings, hats, and more"
+        />
         <Directory />
     </HomePageContainer>
 );

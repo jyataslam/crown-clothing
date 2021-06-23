@@ -40,6 +40,7 @@ export const ModernLink = styled(Link)`
     min-height: 40px;
     padding: 0 20px;
     text-transform: uppercase;
+    font-weight: 700;
     transition: all 0.25s ease-in-out;
 
     ${getButtonStyles}

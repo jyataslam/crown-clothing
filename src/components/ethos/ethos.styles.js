@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Main = styled.section`
-    padding: 100px 0 120px;
+    padding: 100px 0 160px;
     max-width: 1140px;
     width: 100%;
     display: flex;
@@ -71,11 +71,6 @@ export const Subheader = styled.p`
 export const EthosSection = styled.section`
     color: #0c1013;
     width: 100vw;
-    padding-top: 100px;
-
-    @media screen and (max-width: 800px) {
-        padding-top: 0;
-    }
 `;
 
 export const EthoHeader = styled.h4`
@@ -188,23 +183,31 @@ export const IconsContainer = styled.div`
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 0;
     width: 100%;
+    height: 100vh;
     margin-top: 2rem;
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 1100px) {
         grid-template-columns: 1fr 1fr;
         grid-gap: 0;
+        height: 1300px;
+    }
+
+    @media screen and (max-width: 800px) {
+        height: 1000px;
     }
 
     @media screen and (max-width: 550px) {
         grid-template-columns: 1fr;
+        height: 2200px;
     }
 `;
 
 export const EthoContainer = styled.div`
     overflow: hidden;
     height: auto;
+    /* width: 100%; */
     position: relative;
-    aspect-ratio: 1;
+    /* aspect-ratio: ; */
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
