@@ -2,7 +2,12 @@ import React from "react";
 
 import ModernButton from "../modern-button/modern-button.component";
 
-import { HeroContainer, HeroTitle, HeroSubtitle } from "./hero.styles";
+import {
+    HeroContainer,
+    HeroTitle,
+    HeroSubtitle,
+    BackgroundOverlay,
+} from "./hero.styles";
 
 const Hero = ({
     title,
@@ -20,6 +25,7 @@ const Hero = ({
             {...props}
             className={`${backgroundSizeClass} ${backgroundPositionCenter}`}
         >
+            <BackgroundOverlay />
             <HeroTitle className={textWidth50 ? "text-width-50" : null}>
                 {title}
             </HeroTitle>

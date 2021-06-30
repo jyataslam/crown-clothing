@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const Subheader = styled.p`
+    z-index: 1;
     font-size: 12px;
     text-transform: uppercase;
     font-weight: 500;
@@ -11,6 +12,13 @@ export const Subheader = styled.p`
     font-weight: 500;
     position: relative;
     transition: all 0.2s ease-in-out;
+
+    @media screen and (max-width: 550px) {
+        line-height: 1.4em;
+        font-size: 12px;
+        margin-bottom: 0.5rem;
+        font-weight: 400;
+    }
 
     &:hover {
         cursor: pointer;
@@ -70,7 +78,7 @@ export const Main = styled.div`
     }
 
     @media screen and (max-width: 550px) {
-        padding: 0 2rem 2rem;
+        padding: 0 2rem 1rem;
     }
 `;
 
@@ -83,6 +91,11 @@ export const Header = styled.p`
     font-weight: 500;
     font-size: 1.4rem;
     margin-bottom: 12px;
+    z-index: 1;
+
+    @media screen and (max-width: 550px) {
+        font-size: 18px;
+    }
 `;
 
 export const LinkCover = styled(Link)`
@@ -91,4 +104,28 @@ export const LinkCover = styled(Link)`
     width: 100%;
     top: 0;
     left: 0;
+    z-index: 1;
+`;
+
+export const BackgroundOverlay = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+        0deg,
+        rgba(10, 10, 10, 0.649) 0%,
+        rgba(255, 255, 255, 0) 50%
+    );
+
+    @media screen and (max-width: 550px) {
+        background: linear-gradient(
+            0deg,
+            rgba(10, 10, 10, 0.649) 0%,
+            rgba(255, 255, 255, 0) 50%
+        );
+    }
 `;

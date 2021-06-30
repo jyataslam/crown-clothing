@@ -14,18 +14,22 @@ import GogginsImage from "../../assets/images/running-dark-bg.jpg";
 const ImageBlockSplit = () => {
     return (
         <SectionWrapper>
-            <Half>
+            <Half data-aos="fade">
                 <Image src={GogginsImage} />
             </Half>
             <Half>
-                <TextContainer>
+                <TextContainer data-aos="fade">
                     <p>
                         "In a world where mediocrity is often the standard, our
                         life’s mission is to become the uncommon amongst the
                         uncommon."
                     </p>
                     <h4>david goggins</h4>
-                    <ModernButton title="shop now" route="/shop" />
+                    <ModernButton
+                        isroundandcolorful
+                        title="shop now"
+                        route="/shop"
+                    />
                 </TextContainer>
             </Half>
         </SectionWrapper>

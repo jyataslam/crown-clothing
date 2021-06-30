@@ -70,6 +70,7 @@ export const Logo = styled.img`
 export const SectionHeader = styled.h4`
     margin-bottom: 14px;
     margin-top: 0;
+    font-weight: 700;
 `;
 
 export const QuickLink = styled(Link)`

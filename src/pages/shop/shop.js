@@ -8,7 +8,7 @@ import CollectionPageContainer from "../collection/collection.container";
 
 import { fetchCollectionsStart } from "../../redux/shop/shop.actions";
 
-import image from "../../assets/images/shop_image.jpg";
+import image from "../../assets/images/collections-page-header-min.jpg";
 
 import "./shop-page.styles.scss";
 

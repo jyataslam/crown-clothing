@@ -1,13 +1,23 @@
 import React from "react";
 
-import { Header, Subheader } from "./section-title.styles";
+import ModernButton from "../modern-button/modern-button.component";
 
-const SectionTitle = ({ title, subtitle }) => {
+import { Header, Subheader, Main } from "./section-title.styles";
+
+const SectionTitle = ({ title, subtitle, addModernButton }) => {
     return (
-        <>
-            <Header>{title}</Header>
-            <Subheader>{subtitle}</Subheader>
-        </>
+        <Main>
+            <Header data-aos="fade">{title}</Header>
+            <Subheader data-aos="fade">{subtitle}</Subheader>
+            {addModernButton ? (
+                <ModernButton
+                    isroundandcolorful
+                    title="shop now"
+                    route="/shop"
+                    data-aos="fade"
+                />
+            ) : null}
+        </Main>
     );
 };
 

@@ -67,6 +67,9 @@
       margin-left: 4.16667%;
       width: 33.33333%;
       text-transform: uppercase;
+      position: sticky;
+      top: 85px;
+      height: 100%;
 
       @media screen and (max-width: 850px) {
         width: 41.66667%;

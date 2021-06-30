@@ -10,6 +10,7 @@ import {
 import Hero from "../../components/hero/hero.component";
 import CheckoutItem from "../../components/checkout-item/checkout";
 import StripeCheckoutButton from "../../components/stripe-button/stripe-button";
+import ModernButton from "../../components/modern-button/modern-button.component";
 
 import "./checkout.scss";
 
@@ -24,7 +25,10 @@ const CheckoutPage = ({ cartItems, cartTotal }) => (
             <h2>Cart</h2>
         </div>
         {cartItems.length === 0 ? (
-            <p className="empty">oh no, your cart is empty</p>
+            <>
+                <p className="empty">your cart is empty</p>
+                <ModernButton title="back to shop" route="/shop" />
+            </>
         ) : null}
         <div className="checkout-flex-wrapper">
             <div className="checkout-items-container">

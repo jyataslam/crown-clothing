@@ -23,9 +23,44 @@ const whiteAndTransparentStyles = css`
     }
 `;
 
+const roundAndColorfulStyles = css`
+    background: #ff0126;
+    border-radius: 25px;
+    color: white;
+    border: none;
+    padding: 16px 36px;
+    min-width: unset;
+    width: fit-content;
+    margin: 0 auto;
+
+    &:hover {
+        background: #ff2243;
+    }
+`;
+
+const roundAndTransparentStyles = css`
+    background: transparent;
+    border-radius: 25px;
+    color: white;
+    padding: 16px 36px;
+    min-width: unset;
+    width: fit-content;
+    margin: 0 auto;
+    border: 1px solid white;
+
+    &:hover {
+        background: #ff0126;
+        border: 1px solid #ff0126;
+    }
+`;
+
 const getButtonStyles = props => {
     if (props.whiteAndTransparent) {
         return whiteAndTransparentStyles;
+    } else if (props.isroundandcolorful) {
+        return roundAndColorfulStyles;
+    } else if (props.isroundandtransparent) {
+        return roundAndTransparentStyles;
     }
 
     return defaultButtonStyles;

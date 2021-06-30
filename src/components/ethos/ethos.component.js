@@ -22,29 +22,9 @@ import UncommonImage from "../../assets/images/uncommon.jpg";
 
 const Ethos = () => (
     <Main>
-        {/* <QuoteSection>
-            <img
-                src={Quotations}
-                alt="double quotations"
-                className="quotations"
-            />
-            <Quote>
-                "In a world where mediocrity is often the standard, our life’s
-                mission is to become the uncommon amongst the uncommon."
-            </Quote>
-            <QuoteOwnerContainer>
-                <QuoteName>David Goggins</QuoteName>
-                <QuoteTitle>Owner, Badass Motherfucker</QuoteTitle>
-                <img
-                    src={Headshot}
-                    alt="david goggins headshot"
-                    className="headshot"
-                />
-            </QuoteOwnerContainer>
-        </QuoteSection> */}
         <EthosSection>
-            <Header>Driven, not motivated</Header>
-            <Subheader>
+            <Header data-aos="fade">Driven, not motivated</Header>
+            <Subheader data-aos="fade">
                 It isn't only about the physical...it's about transforming your
                 mind through a set of core ethos.<br></br>It's what STAY HARD
                 stands for.

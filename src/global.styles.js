@@ -6,13 +6,24 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        font-family: 'Poppins', sans-serif;
+        font-family: 'Montserrat', sans-serif;
         letter-spacing: 1px;
         font-size: 14px;
 
         @media screen and (max-width: 800px) {
             // padding: 10px;
         }
+    }
+
+    p {
+        letter-spacing: .02rem;
+        font-weight: 300;
+        line-height: 1.4;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        letter-spacing: 1px;
+        font-weight: 400;
     }
 
     a {
@@ -36,7 +47,7 @@ export const GlobalStyle = createGlobalStyle`
 
     .small {
         height: 500px !important;
-        width: 100%;
+        width: 100% !important;
 
         @media screen and (max-width: 800px) {
             height: 400px !important;
@@ -46,7 +57,7 @@ export const GlobalStyle = createGlobalStyle`
 
     .x-small {
         height: 300px !important;
-        width: 100%;
+        width: 100% !important;
     }
 
     .text-width-50 {
@@ -75,5 +86,9 @@ export const GlobalStyle = createGlobalStyle`
     textarea:focus,
     button:focus {
         outline: none;
+    }
+
+    [data-aos=fade-up] {
+        transform: translate3d(0,20px,0)
     }
 `;

@@ -12,9 +12,11 @@ import {
 import image from "../../assets/images/goggins_running_in_ocean.jpeg";
 import splitImage from "../../assets/images/running_with_water_vest.jpg";
 import summerCollectionSplitImage from "../../assets/images/shop_image.jpg";
+import TopBannerImage from "../../assets/images/running-dark-bg.jpg";
+
 import Ethos from "../../components/ethos/ethos.component";
 import SectionTitle from "../../components/section-title/section-title.component";
-import ImageBlockSplit from "../../components/image-block-split/image-block-split.component";
+import Banner from "../../components/banner/banner.component";
 
 const Homepage = () => (
     <HomePageContainer>
@@ -45,8 +47,9 @@ const Homepage = () => (
         <SectionTitle
             title="Gear up for day one, week one"
             subtitle="STAY HARD isn't only about the physical...it's about transforming your mind through a set of core ethos."
+            addModernButton
         />
-        <ImageBlockSplit />
+        <Banner backgroundImage={TopBannerImage} />
         <Ethos />
         <SectionTitle
             title="shop"

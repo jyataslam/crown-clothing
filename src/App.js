@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
+import AOS from "aos";
 
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
@@ -15,11 +16,16 @@ import AboutPage from "./pages/about/about.page";
 import SignInAndSignUpPage from "./pages/sign-in-and-sign-up/sign-in-and-sign-up";
 import CheckoutPage from "./pages/checkout/checkout";
 
+import "aos/dist/aos.css";
 import { GlobalStyle } from "./global.styles";
 
 const App = ({ checkUserSession, currentUser }) => {
     useEffect(() => {
         checkUserSession();
+        AOS.init({
+            duration: "1000",
+        });
+        AOS.refresh();
     }, [checkUserSession]);
 
     return (

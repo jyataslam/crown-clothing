@@ -5,6 +5,7 @@ export const SectionWrapper = styled.section`
     min-height: 100px;
     display: flex;
     flex-wrap: wrap;
+    margin-top: 100px;
 `;
 
 export const Half = styled.div`
@@ -39,18 +40,21 @@ export const TextContainer = styled.div`
     padding: 20px;
     text-align: center;
 
+    @media screen and (max-width: 550px) {
+        width: 100%;
+    }
+
     h4 {
         text-transform: uppercase;
+        font-weight: bold;
     }
 
     p {
-        font-size: 18px;
-        font-weight: 200;
+        font-size: 24px;
+        font-weight: 400;
     }
 
     a {
-        width: 200px;
-        min-width: 200px;
         margin: auto;
         margin-top: 1.5rem;
     }

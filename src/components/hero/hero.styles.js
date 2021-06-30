@@ -34,6 +34,7 @@ const getHeroContainerStyles = props => {
 };
 
 export const HeroContainer = styled.div`
+    position: relative;
     background: ${props => `url('${props.backgroundImage}')`};
     margin: 0 auto 15px;
     background-size: cover;
@@ -68,6 +69,10 @@ export const HeroContainer = styled.div`
     }
 
     ${getHeroContainerStyles}
+
+    a {
+        z-index: 1;
+    }
 `;
 
 export const HeroTitle = styled.h1`
@@ -78,6 +83,7 @@ export const HeroTitle = styled.h1`
     font-weight: 400;
     letter-spacing: 0;
     margin-bottom: 0;
+    z-index: 1;
     width: ${props =>
         props.theme.themeWidth50
             ? props.theme.themeWidth50
@@ -90,6 +96,7 @@ export const HeroTitle = styled.h1`
 `;
 
 export const HeroSubtitle = styled.h3`
+    z-index: 1;
     color: inherit;
     text-transform: uppercase;
     font-weight: 400;
@@ -103,4 +110,19 @@ export const HeroSubtitle = styled.h3`
         props.theme.themeWidth50
             ? props.theme.themeWidth50
             : props.theme.defaultChildrenTheme};
+`;
+
+export const BackgroundOverlay = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+        0deg,
+        rgba(10, 10, 10, 0.649) 0%,
+        rgba(255, 255, 255, 0) 50%
+    );
 `;

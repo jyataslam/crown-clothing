@@ -25,14 +25,15 @@ export const HeaderContainer = styled.div`
     &.scrolled {
         background: white;
         border-bottom: none;
+        box-shadow: 0 3px 5px 0 rgb(0 0 0 / 10%);
     }
 
     @media screen and (max-width: 800px) {
         position: fixed;
         top: 0;
         left: 0;
-        height: 45px;
-        padding: 5px;
+        height: 55px;
+        padding: 10px 5px;
         margin-bottom: 0;
         background: transparent;
         z-index: 10;
@@ -91,9 +92,9 @@ export const OptionLink = styled(Link)`
     padding: 10px 15px;
     cursor: pointer;
     text-transform: uppercase;
-    font-size: 0.875rem;
+    font-size: 10px;
     color: white;
-    font-weight: 500;
+    font-weight: bold;
     transition: all 0.5s ease-in-out;
 
     &.scrolled {

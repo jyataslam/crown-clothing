@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Main = styled.section`
-    padding: 100px 0 160px;
+    padding: 160px 0 100px;
     max-width: 1140px;
     width: 100%;
     display: flex;
@@ -10,11 +10,7 @@ export const Main = styled.section`
     align-items: center;
 
     @media screen and (max-width: 800px) {
-        padding: 80px 1rem 100px;
-    }
-
-    @media screen and (max-width: 550px) {
-        padding-top: 60px;
+        padding: 100px 1rem 35px;
     }
 `;
 
@@ -36,25 +32,27 @@ export const Quote = styled.span`
 export const Header = styled.h3`
     text-transform: uppercase;
     text-align: center;
-    font-weight: 700;
-    font-size: 5rem;
+    font-weight: 400;
+    font-size: 4rem;
     margin-bottom: 0;
+    margin-top: 0;
     padding: 0 1rem;
     line-height: 1.2;
+    color: #ff0126;
 
     @media screen and (max-width: 800px) {
         font-size: 3rem;
     }
     @media screen and (max-width: 550px) {
-        font-size: 2.8rem;
+        font-size: 32px;
     }
 `;
 
 export const Subheader = styled.p`
     text-align: center;
-    font-weight: 200;
     color: #0c0c0c;
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 1.6;
     margin-bottom: 25px;
     padding: 0.5rem 1rem 2rem;
 
@@ -77,7 +75,8 @@ export const EthoHeader = styled.h4`
     color: rgba(0, 0, 0, 0);
     text-shadow: 0 0 0px white;
     text-transform: uppercase;
-    font-size: 22px;
+    font-size: 18px;
+    letter-spacing: 2px;
     font-weight: 700;
     margin: 0;
     z-index: 1;
@@ -111,9 +110,10 @@ export const EthoDescription = styled.p`
 
     span {
         text-transform: uppercase;
-        font-size: 22px;
+        font-size: 18px;
         font-weight: 700;
         top: 1rem;
+        letter-spacing: 2px;
 
         @media screen and (max-width: 800px) {
             font-size: 14px;
@@ -126,7 +126,7 @@ export const EthoDescription = styled.p`
     }
 
     @media screen and (max-width: 550px) {
-        font-weight: 200;
+        font-weight: 300;
         color: white;
         text-shadow: unset;
         transition: none;
@@ -155,7 +155,7 @@ export const EthoBackgroundImage = styled.div`
     top: 0;
     left: 0;
     opacity: 1;
-    transition: transform 10s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    transition: transform 2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
         opacity 0.4s ease-in-out;
 
     &:after {
@@ -167,8 +167,8 @@ export const EthoBackgroundImage = styled.div`
         top: 0;
         background: linear-gradient(
             0deg,
-            rgba(4, 4, 4, 0.65),
-            rgba(54, 54, 54, 0.2)
+            rgba(20, 20, 20, 0.45),
+            rgba(20, 20, 20, 0.45)
         );
         transition: all 0.4s ease-in-out;
     }
@@ -183,7 +183,7 @@ export const IconsContainer = styled.div`
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 0;
     width: 100%;
-    height: 100vh;
+    height: 1200px;
     margin-top: 2rem;
 
     @media screen and (max-width: 1100px) {
@@ -205,15 +205,13 @@ export const IconsContainer = styled.div`
 export const EthoContainer = styled.div`
     overflow: hidden;
     height: auto;
-    /* width: 100%; */
     position: relative;
-    /* aspect-ratio: ; */
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     padding: 2rem 3rem;
-    text-align: left;
+    text-align: center;
 
     img:nth-child(2) {
         width: 175px;
