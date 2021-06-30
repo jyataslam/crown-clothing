@@ -4,9 +4,9 @@ import ModernButton from "../modern-button/modern-button.component";
 
 import { Header, Subheader, Main } from "./section-title.styles";
 
-const SectionTitle = ({ title, subtitle, addModernButton }) => {
+const SectionTitle = ({ title, subtitle, addModernButton, background }) => {
     return (
-        <Main>
+        <Main background={background}>
             <Header data-aos="fade">{title}</Header>
             <Subheader data-aos="fade">{subtitle}</Subheader>
             {addModernButton ? (

@@ -116,16 +116,16 @@ export const BackgroundOverlay = styled.div`
     z-index: 1;
     background: rgb(0, 0, 0);
     background: linear-gradient(
-        0deg,
-        rgba(10, 10, 10, 0.649) 0%,
-        rgba(255, 255, 255, 0) 50%
+        to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.6)
     );
 
     @media screen and (max-width: 550px) {
         background: linear-gradient(
-            0deg,
-            rgba(10, 10, 10, 0.649) 0%,
-            rgba(255, 255, 255, 0) 50%
+            to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.6)
         );
     }
 `;

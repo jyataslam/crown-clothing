@@ -17,6 +17,7 @@ import TopBannerImage from "../../assets/images/running-dark-bg.jpg";
 import Ethos from "../../components/ethos/ethos.component";
 import SectionTitle from "../../components/section-title/section-title.component";
 import Banner from "../../components/banner/banner.component";
+import EthosSection from "../../components/ethos-section/ethos-section.component";
 
 const Homepage = () => (
     <HomePageContainer>
@@ -50,10 +51,11 @@ const Homepage = () => (
             addModernButton
         />
         <Banner backgroundImage={TopBannerImage} />
-        <Ethos />
+        <EthosSection />
         <SectionTitle
             title="shop"
             subtitle="Shop the latest shirts, leggings, hats, and more"
+            background="#f5f5f5"
         />
         <Directory />
     </HomePageContainer>

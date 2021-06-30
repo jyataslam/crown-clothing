@@ -119,10 +119,10 @@ export const BackgroundOverlay = styled.div`
     width: 100%;
     height: 100%;
     z-index: 1;
-    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.472);
     background: linear-gradient(
-        0deg,
-        rgba(10, 10, 10, 0.649) 0%,
-        rgba(255, 255, 255, 0) 50%
+        to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.4)
     );
 `;
