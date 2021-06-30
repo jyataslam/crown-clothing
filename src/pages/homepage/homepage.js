@@ -14,7 +14,6 @@ import splitImage from "../../assets/images/running_with_water_vest.jpg";
 import summerCollectionSplitImage from "../../assets/images/shop_image.jpg";
 import TopBannerImage from "../../assets/images/running-dark-bg.jpg";
 
-import Ethos from "../../components/ethos/ethos.component";
 import SectionTitle from "../../components/section-title/section-title.component";
 import Banner from "../../components/banner/banner.component";
 import EthosSection from "../../components/ethos-section/ethos-section.component";
