@@ -17,6 +17,7 @@ import TopBannerImage from "../../assets/images/running-dark-bg.jpg";
 import SectionTitle from "../../components/section-title/section-title.component";
 import Banner from "../../components/banner/banner.component";
 import EthosSection from "../../components/ethos-section/ethos-section.component";
+import BookSection from "../../components/book-section/book-section.component";
 
 const Homepage = () => (
     <HomePageContainer>
@@ -46,15 +47,15 @@ const Homepage = () => (
         </FlexContainer>
         <SectionTitle
             title="Gear up for day one, week one"
-            subtitle="STAY HARD isn't only about the physical...it's about transforming your mind through a set of core ethos."
+            subtitle="Made for the savage within us, inspired by our lord and savior David Goggins"
             addModernButton
         />
         <Banner backgroundImage={TopBannerImage} />
         <EthosSection />
+        <BookSection />
         <SectionTitle
             title="shop"
             subtitle="Shop the latest shirts, leggings, hats, and more"
-            background="#f5f5f5"
         />
         <Directory />
     </HomePageContainer>

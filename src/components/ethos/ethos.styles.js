@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Main = styled.section`
-    padding: 160px 0 100px;
+    padding: 10px 0 0;
     max-width: 1140px;
     width: 100%;
     display: flex;
@@ -30,15 +30,14 @@ export const Quote = styled.span`
 `;
 
 export const Header = styled.h3`
-    text-transform: uppercase;
+    color: #0c1013;
+    padding: 0 1rem 1rem;
     text-align: center;
+    text-transform: uppercase;
+    font-size: 3rem;
     font-weight: 400;
-    font-size: 4rem;
-    margin-bottom: 0;
-    margin-top: 0;
-    padding: 0 1rem;
-    line-height: 1.2;
-    color: #ff0126;
+    margin: 0 auto;
+    position: relative;
 
     @media screen and (max-width: 800px) {
         font-size: 3rem;
@@ -52,9 +51,10 @@ export const Subheader = styled.p`
     text-align: center;
     color: #0c0c0c;
     font-size: 16px;
-    line-height: 1.6;
     margin-bottom: 25px;
-    padding: 0.5rem 1rem 2rem;
+    padding: 0.75rem 1rem 2.4rem;
+    margin: 0 auto;
+    position: relative;
 
     @media screen and (max-width: 800px) {
         font-size: 16px;

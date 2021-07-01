@@ -9,7 +9,11 @@ import "./collection-item.styles.scss";
 const CollectionItem = ({ item, addItem }) => {
     const { name, price, imageUrl } = item;
     return (
-        <div className="collection-item">
+        <div
+            className="collection-item"
+            data-aos="fade-up"
+            data-aos-once="true"
+        >
             <div
                 className="image"
                 style={{

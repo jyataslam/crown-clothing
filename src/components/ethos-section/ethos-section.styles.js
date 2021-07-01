@@ -4,6 +4,10 @@ export const Main = styled.section`
     padding: 0 0 30px;
     max-width: 1140px;
     width: 100%;
+
+    @media screen and (max-width: 550px) {
+        padding-bottom: 0;
+    }
 `;
 
 export const IconsContainer = styled.div`

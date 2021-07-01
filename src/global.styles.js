@@ -18,7 +18,7 @@ export const GlobalStyle = createGlobalStyle`
     p {
         letter-spacing: .02rem;
         font-weight: 300;
-        line-height: 1.4;
+        line-height: 1.6;
     }
 
     h1, h2, h3, h4, h5, h6 {
