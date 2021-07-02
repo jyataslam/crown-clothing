@@ -79,4 +79,18 @@ export const ModernLink = styled(Link)`
     transition: all 0.25s ease-in-out;
 
     ${getButtonStyles}
+
+    span {
+        margin-left: 8px;
+        display: flex;
+        align-items: center;
+    }
+`;
+
+export const Circle = styled.div`
+    background: white;
+    height: 4px;
+    width: 4px;
+    border-radius: 100%;
+    margin-right: 8px;
 `;

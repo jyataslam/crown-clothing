@@ -35,11 +35,11 @@ export const SidenavLogo = styled.img`
 `;
 
 export const HamburgerSpan = styled.span`
-    width: 3rem;
+    width: 2.5rem;
 `;
 
 export const Hamburger = styled.img`
-    width: 1.4rem;
+    width: 1rem;
 `;
 
 export const LinksContainer = styled.ul`

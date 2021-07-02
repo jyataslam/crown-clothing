@@ -1,10 +1,15 @@
 import React from "react";
 
-import { ModernLink } from "./modern-button.styles";
+import { ModernLink, Circle } from "./modern-button.styles";
 
-const ModernButton = ({ title, route, ...props }) => (
+const ModernButton = ({ title, route, total, ...props }) => (
     <ModernLink to={route} {...props}>
-        {title}
+        {title}{" "}
+        {total ? (
+            <span>
+                <Circle />${total}
+            </span>
+        ) : null}
     </ModernLink>
 );
 

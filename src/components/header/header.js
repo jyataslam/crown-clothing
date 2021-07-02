@@ -3,13 +3,14 @@ import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 
 import CartIcon from "../cart-icon/cart-icon";
-import CartDropdown from "../cart-dropdown/cart-dropdown";
 import UserIcon from "../user-icon/user-icon.component";
 import Sidenav from "../sidenav/sidenav.component";
+import CartSidenav from "../cart-sidenav/cart-sidenav.component";
 
 import { selectCartHidden } from "../../redux/cart/cart.selectors";
 import { selectCurrentUser } from "../../redux/user/user.selectors";
 import { signOutStart } from "../../redux/user/user.actions";
+import { toggleCartHidden } from "../../redux/cart/cart.actions";
 
 import Logo from "../../assets/images/logo_footer.png";
 import HamburgerOpen from "../../assets/images/hamburger_open.png";
@@ -38,6 +39,16 @@ const Header = ({ currentUser, hidden, signOutStart }) => {
     };
 
     const handleSidenavClick = () => {
+        if (!open) {
+            if (hidden) {
+                isOpen(!open);
+                return;
+            } else if (!hidden) {
+                toggleCartHidden();
+                isOpen(!open);
+            }
+            return;
+        }
         isOpen(!open);
     };
 
@@ -107,8 +118,8 @@ const Header = ({ currentUser, hidden, signOutStart }) => {
                     <UserIcon username={currentUser.displayName} />
                 ) : null}
                 <CartIcon scrolled={scrolled} />
-                {hidden ? null : <CartDropdown />}
             </ShopButtonContainer>
+            <CartSidenav />
         </HeaderContainer>
     );
 };
@@ -120,6 +131,7 @@ const mapStateToProps = createStructuredSelector({
 
 const mapDispatchToProps = dispatch => ({
     signOutStart: () => dispatch(signOutStart()),
+    toggleCartHidden: () => dispatch(toggleCartHidden()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);

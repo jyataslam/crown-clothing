@@ -18,7 +18,7 @@ export const Header = styled.h2`
     text-align: center;
     text-transform: uppercase;
     font-size: 3rem;
-    font-weight: 400;
+    font-weight: 300;
     margin: 0 auto;
     position: relative;
 
