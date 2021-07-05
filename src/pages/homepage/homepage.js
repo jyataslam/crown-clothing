@@ -1,4 +1,5 @@
 import React from "react";
+
 import Directory from "../../components/directory/directory";
 import Hero from "../../components/hero/hero.component";
 import HeroSplit from "../../components/hero-split/hero-split.component";
@@ -19,46 +20,48 @@ import Banner from "../../components/banner/banner.component";
 import EthosSection from "../../components/ethos-section/ethos-section.component";
 import BookSection from "../../components/book-section/book-section.component";
 
-const Homepage = () => (
-    <HomePageContainer>
-        <FlexContainer>
-            <Hero
-                backgroundImage={image}
-                title="Stay Hard"
-                subtitle="A Tribute to the hardest man alive"
-                route="/shop"
-                btnTitle="Shop Now"
-                backgroundPositionCenter="background-position-center"
+const Homepage = () => {
+    return (
+        <HomePageContainer>
+            <FlexContainer>
+                <Hero
+                    backgroundImage={image}
+                    title="Stay Hard"
+                    subtitle="A Tribute to the hardest man alive"
+                    route="/shop"
+                    btnTitle="Shop Now"
+                    backgroundPositionCenter="background-position-center"
+                />
+                <FlexContainerColumn>
+                    <HeroSplit
+                        bgImage={summerCollectionSplitImage}
+                        title="summer collection"
+                        subtitle="gear up for the summer heat"
+                        url="/shop"
+                    />
+                    <HeroSplit
+                        bgImage={splitImage}
+                        title="bodyweight program"
+                        subtitle="strengthen your core to the max"
+                        url="/bodyweight-program"
+                    />
+                </FlexContainerColumn>
+            </FlexContainer>
+            <SectionTitle
+                title="Gear up for day one, week one"
+                subtitle="Made for the savage within us, inspired by our lord and savior David Goggins"
+                addModernButton
             />
-            <FlexContainerColumn>
-                <HeroSplit
-                    bgImage={summerCollectionSplitImage}
-                    title="summer collection"
-                    subtitle="gear up for the summer heat"
-                    url="/shop"
-                />
-                <HeroSplit
-                    bgImage={splitImage}
-                    title="bodyweight program"
-                    subtitle="strengthen your core to the max"
-                    url="/bodyweight-program"
-                />
-            </FlexContainerColumn>
-        </FlexContainer>
-        <SectionTitle
-            title="Gear up for day one, week one"
-            subtitle="Made for the savage within us, inspired by our lord and savior David Goggins"
-            addModernButton
-        />
-        <Banner backgroundImage={TopBannerImage} />
-        <EthosSection />
-        <BookSection />
-        <SectionTitle
-            title="shop"
-            subtitle="Shop the latest shirts, leggings, hats, and more"
-        />
-        <Directory />
-    </HomePageContainer>
-);
+            <Banner backgroundImage={TopBannerImage} />
+            <EthosSection />
+            <BookSection />
+            <SectionTitle
+                title="shop"
+                subtitle="Shop the latest shirts, leggings, hats, and more"
+            />
+            <Directory />
+        </HomePageContainer>
+    );
+};
 
 export default Homepage;

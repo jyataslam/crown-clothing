@@ -15,7 +15,7 @@ export const Main = styled.div`
     padding: 25px;
     overflow-y: scroll;
     transform: translateX(100%);
-    transition: 0.4s ease-in-out;
+    transition: 0.3s ease-in-out;
 
     &.open {
         transform: translateX(0);
@@ -23,7 +23,7 @@ export const Main = styled.div`
     }
 
     @media screen and (max-width: 800px) {
-        width: 85%;
+        width: 100%;
     }
 `;
 
@@ -107,4 +107,10 @@ export const CartItemsContainer = styled.div`
     & .empty-message {
         text-transform: uppercase;
     }
+`;
+
+export const SocialLinksContainer = styled.div`
+    margin: 0 12px;
+    padding: 16px 0;
+    display: flex;
 `;

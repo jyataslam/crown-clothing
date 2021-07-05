@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const SidenavMain = styled.div`
     height: 100vh;
-    width: 85%;
+    width: 100vw;
     position: fixed;
     z-index: 10;
     top: 0;

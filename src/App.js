@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Route, Switch, Redirect, useLocation } from "react-router-dom";
 import AOS from "aos";
 
 import { connect } from "react-redux";
@@ -20,6 +20,8 @@ import "aos/dist/aos.css";
 import { GlobalStyle } from "./global.styles";
 
 const App = ({ checkUserSession, currentUser }) => {
+    const location = useLocation();
+
     useEffect(() => {
         checkUserSession();
         AOS.init({
@@ -33,7 +35,7 @@ const App = ({ checkUserSession, currentUser }) => {
             <GlobalStyle />
             <ScrollToTop />
             <Header />
-            <Switch>
+            <Switch location={location} key={location.key}>
                 <Route exact path="/" component={HomePage} />
                 <Route path="/shop" component={ShopPage} />
                 <Route path="/about" component={AboutPage} />

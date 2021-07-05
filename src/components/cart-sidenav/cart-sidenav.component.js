@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
+import { SocialIcon } from "react-social-icons";
 
 import { toggleCartHidden } from "../../redux/cart/cart.actions";
 import {
@@ -21,6 +22,7 @@ import {
     HamburgerSpan,
     Hamburger,
     CartItemsContainer,
+    SocialLinksContainer,
     Footer,
 } from "./cart-sidenav.styles";
 
@@ -54,6 +56,26 @@ const CartSidenav = ({ hidden, toggleCartHidden, cartItems, cartTotal }) => {
                     route="/checkout"
                     onClick={toggleCartHidden}
                 />
+                <SocialLinksContainer>
+                    <SocialIcon
+                        url="https://www.instagram.com/davidgoggins/"
+                        bgColor="transparent"
+                        fgColor="#565454"
+                        style={{ height: "40px", width: "40px" }}
+                    />
+                    <SocialIcon
+                        url="https://twitter.com/davidgoggins"
+                        bgColor="transparent"
+                        fgColor="#565454"
+                        style={{ height: "40px", width: "40px" }}
+                    />
+                    <SocialIcon
+                        url="https://www.facebook.com/iamdavidgoggins"
+                        bgColor="transparent"
+                        fgColor="#565454"
+                        style={{ height: "40px", width: "40px" }}
+                    />
+                </SocialLinksContainer>
             </Footer>
         </Main>
     );
