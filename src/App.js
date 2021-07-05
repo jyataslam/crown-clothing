@@ -19,7 +19,7 @@ import CheckoutPage from "./pages/checkout/checkout";
 import "aos/dist/aos.css";
 import { GlobalStyle } from "./global.styles";
 
-const App = ({ checkUserSession, currentUser }) => {
+const App = ({ checkUserSession, currentUser, hideLoader }) => {
     const location = useLocation();
 
     useEffect(() => {
@@ -28,7 +28,8 @@ const App = ({ checkUserSession, currentUser }) => {
             duration: "1000",
         });
         AOS.refresh();
-    }, [checkUserSession]);
+        hideLoader();
+    }, [checkUserSession, hideLoader]);
 
     return (
         <div>
