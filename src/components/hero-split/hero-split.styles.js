@@ -31,7 +31,7 @@ export const Subheader = styled.p`
         left: 0;
         width: 0;
         height: 2px;
-        background-color: orange;
+        background-color: #ff0126;
         transition: all 0.2s ease-in-out;
     }
 `;
@@ -65,7 +65,7 @@ export const Main = styled.div`
     }
 
     &:hover ${Subheader} {
-        color: orange;
+        color: #ff0126;
 
         &:after {
             width: 100%;

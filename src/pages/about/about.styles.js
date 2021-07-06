@@ -22,9 +22,19 @@ export const CategoryDescription = styled.p`
     & a {
         font-style: italic;
     }
+
+    span {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 12px;
+    }
 `;
 
 export const CategoryList = styled.ul`
     list-style-type: circle;
     margin-bottom: 2rem;
+
+    li {
+        padding-bottom: 5px;
+    }
 `;

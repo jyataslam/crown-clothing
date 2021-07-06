@@ -13,7 +13,7 @@ import {
 const InitialTransition = () => {
     const blackBox = {
         initial: {
-            height: "100vh",
+            height: "100%",
             bottom: 0,
         },
         animate: {

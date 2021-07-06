@@ -53,7 +53,11 @@ const CollectionItem = ({ item, addItem }) => {
                     className="added"
                     initial={{ x: "-100%", opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
-                    transition={{ type: "spring", stiffness: 120, delay: 0.2 }}
+                    transition={{
+                        type: "spring",
+                        stiffness: 120,
+                        delay: 0.2,
+                    }}
                 >
                     added &#x2713;
                 </motion.span>

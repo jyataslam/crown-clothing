@@ -37,19 +37,20 @@ const AboutPage = () => {
                     passion of code from the beginning...Mr. David Goggins
                     himself.<br></br>
                     <br></br>
-                    <i>
-                        This is strictly a <b>TEST</b> website and no actual
-                        goods are sold on here.
-                    </i>{" "}
+                    <span>
+                        This is strictly a TEST website and no actual goods are
+                        sold on here.
+                    </span>
                 </CategoryDescription>
                 <CategoryHeading>tech used to build site</CategoryHeading>
                 <CategoryList>
                     <li>React</li>
                     <li>Redux-Saga</li>
                     <li>Redux-Reselect</li>
-                    <li>Jest</li>
                     <li>Firebase</li>
                     <li>Stripe API</li>
+                    <li>Framer Motion</li>
+                    <li>Jest</li>
                     <li>Axios</li>
                     <li>Styled Components</li>
                     <li>SASS</li>

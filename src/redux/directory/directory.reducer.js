@@ -24,15 +24,15 @@ const INITIAL_STATE = {
         },
         {
             title: "jackets",
-            imageUrl: "https://i.ibb.co/px2tCc3/jackets.png",
+            imageUrl: "https://i.ibb.co/Rh5RZ88/hatchet-ethos-gray.jpg",
             id: 2,
             linkUrl: "shop/jackets",
         },
         {
-            title: "sneakers",
-            imageUrl: "https://i.ibb.co/0jqHpnp/sneakers.png",
+            title: "book",
+            imageUrl: "https://i.ibb.co/BZmpFM8/book.jpg",
             id: 3,
-            linkUrl: "shop/sneakers",
+            linkUrl: "shop/book",
         },
     ],
 };

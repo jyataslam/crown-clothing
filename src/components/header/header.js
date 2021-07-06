@@ -40,14 +40,6 @@ const Header = ({ currentUser, hidden, signOutStart }) => {
 
     const handleSidenavClick = () => {
         if (!open) {
-            if (hidden) {
-                isOpen(!open);
-                return;
-            } else if (!hidden) {
-                toggleCartHidden();
-                isOpen(!open);
-            }
-            return;
         }
         isOpen(!open);
     };

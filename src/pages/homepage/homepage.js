@@ -51,7 +51,7 @@ const Homepage = () => {
                         bgImage={splitImage}
                         title="bodyweight program"
                         subtitle="strengthen your core to the max"
-                        url="/bodyweight-program"
+                        url="/"
                     />
                 </FlexContainerColumn>
             </FlexContainer>
