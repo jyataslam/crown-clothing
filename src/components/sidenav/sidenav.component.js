@@ -58,8 +58,8 @@ const Sidenav = ({ isOpen, handleSidenavClick, currentUser, signOutStart }) => (
                 </SidenavLink>
             </LinkContainer>
             <LinkContainer>
-                <SidenavLink to="/shop/sneakers" onClick={handleSidenavClick}>
-                    sneakers
+                <SidenavLink to="/shop/book" onClick={handleSidenavClick}>
+                    book
                 </SidenavLink>
             </LinkContainer>
             <LinkContainer>
