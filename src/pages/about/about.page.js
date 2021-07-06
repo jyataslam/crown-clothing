@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 import Hero from "../../components/hero/hero.component";
 
@@ -13,7 +14,11 @@ import {
 
 const AboutPage = () => {
     return (
-        <section>
+        <motion.section
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+        >
             <Hero
                 backgroundSizeClass="small"
                 backgroundImage={image}
@@ -67,7 +72,7 @@ const AboutPage = () => {
                     <a href="mailto:jasonyata@gmail.com">jasonyata@gmail.com</a>
                 </CategoryDescription>
             </AboutWrapper>
-        </section>
+        </motion.section>
     );
 };
 

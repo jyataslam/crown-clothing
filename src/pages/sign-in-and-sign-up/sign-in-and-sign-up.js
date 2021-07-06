@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 import SignIn from "../../components/sign-in/sign-in";
 import SignUp from "../../components/sign-up/sign-up";
@@ -9,7 +10,12 @@ import "./sign-in-and-sign-up.styles.scss";
 
 const SignInAndSignUpPage = () => {
     return (
-        <div className="sign-in-and-sign-up">
+        <motion.div
+            className="sign-in-and-sign-up"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+        >
             <div className="sign-in-hero">
                 <div className="sign-in-content">
                     <img
@@ -27,7 +33,7 @@ const SignInAndSignUpPage = () => {
                 <SignIn />
                 <SignUp />
             </div>
-        </div>
+        </motion.div>
     );
 };
 

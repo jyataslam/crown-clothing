@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
+import { motion } from "framer-motion";
 
 import {
     selectCartItems,
@@ -15,7 +16,12 @@ import ModernButton from "../../components/modern-button/modern-button.component
 import "./checkout.scss";
 
 const CheckoutPage = ({ cartItems, cartTotal }) => (
-    <div className="checkout-page">
+    <motion.div
+        className="checkout-page"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+    >
         <Hero
             backgroundImage="https://i.ibb.co/0n2xwzB/hats-min.jpg"
             backgroundPositionCenter="background-center"
@@ -73,7 +79,7 @@ const CheckoutPage = ({ cartItems, cartTotal }) => (
                 </div>
             )}
         </div>
-    </div>
+    </motion.div>
 );
 
 const mapStateToProps = createStructuredSelector({

@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 import Directory from "../../components/directory/directory";
 import Hero from "../../components/hero/hero.component";
@@ -15,6 +16,7 @@ import splitImage from "../../assets/images/running_with_water_vest.jpg";
 import summerCollectionSplitImage from "../../assets/images/shop_image.jpg";
 import TopBannerImage from "../../assets/images/running-dark-bg.jpg";
 
+import InitialTransition from "../../components/initial-transition/initial-transition.component";
 import SectionTitle from "../../components/section-title/section-title.component";
 import Banner from "../../components/banner/banner.component";
 import EthosSection from "../../components/ethos-section/ethos-section.component";
@@ -22,7 +24,13 @@ import BookSection from "../../components/book-section/book-section.component";
 
 const Homepage = () => {
     return (
-        <HomePageContainer>
+        <HomePageContainer
+            as={motion.div}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+        >
+            <InitialTransition />
             <FlexContainer>
                 <Hero
                     backgroundImage={image}

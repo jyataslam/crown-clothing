@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
 import { connect } from "react-redux";
+import { motion } from "framer-motion";
 
 import Hero from "../../components/hero/hero.component";
 import CollectionsOverviewContainer from "../../components/collections-overview/collections-overview.container";
@@ -19,7 +20,12 @@ const ShopPage = ({ fetchCollectionsStart, match }) => {
     // if using useEffect as componentDidMount, put function from props inside 2nd parameter array
 
     return (
-        <div className="shop-page">
+        <motion.div
+            className="shop-page"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+        >
             {match.isExact ? (
                 <Hero
                     backgroundImage={image}
@@ -39,7 +45,7 @@ const ShopPage = ({ fetchCollectionsStart, match }) => {
                 path={`${match.path}/:collectionId`}
                 component={CollectionPageContainer}
             />
-        </div>
+        </motion.div>
     );
 };
 

@@ -23,9 +23,12 @@
     }
   }
 
+  @media screen and (max-width: 800px) {
+    margin-bottom: 45px;
+  }
+
   @media screen and (max-width: 550px) {
     height: 375px;
-    margin-bottom: 45px;
   }
 
   &:hover {
@@ -107,6 +110,12 @@
 
     &:hover {
       cursor: pointer;
+    }
+
+    @media screen and (max-width: 800px) {
+      min-height: 32px;
+      padding: 0 20px;
+      font-size: 10px;
     }
   }
 
